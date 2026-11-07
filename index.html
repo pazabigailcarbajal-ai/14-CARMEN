@@ -1,0 +1,1706 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carmen · Derecho Penal · Cap. 14</title>
+<meta name="description" content="Plataforma de estudio guiado de la Segunda parte, Capítulo noveno (Excluyentes de la culpabilidad) de Lecciones de derecho penal, Díaz-Aranda, ajustada a Carmen">
+<meta name="theme-color" content="#c2185b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&display=swap">
+<style>
+/* Concepto: «Expediente rosa» (mismo estilo que los capítulos 2 a 13); citas del libro como fojas engrapadas, rosa como color de marca. */
+:root {
+  --bg: #fbf1f5;
+  --surface: #ffffff;
+  --surface-2: #f8e6ee;
+  --ink: #2b1621;
+  --muted: #7b5b69;
+  --line: #efd3df;
+  --accent: #c2185b;
+  --accent-2: #e04a86;
+  --accent-soft: #fde1ec;
+  --on-accent: #ffffff;
+  --mark: #ffc4da;
+  --mark-ink: #2b1621;
+  --ok: #18794e;
+  --ok-soft: #ddf3e8;
+  --bad: #b3261e;
+  --bad-soft: #fde4e1;
+  --warn: #8a5300;
+  --warn-soft: #fff0d9;
+  --paper-rule: #f3c6d7;
+  --shadow: 0 1px 2px rgba(120, 20, 60, .06), 0 8px 22px rgba(120, 20, 60, .07);
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --r: 16px;
+  --cw: 24px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+    --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+    --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+    --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+  --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+  --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+  --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+mark { background: linear-gradient(transparent 40%, var(--mark) 40%, var(--mark) 92%, transparent 92%); color: var(--mark-ink); padding: 0 2px; }
+a { color: var(--accent); }
+.app { max-width: 720px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px calc(100px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+.app > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+.center { text-align: center; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.eyebrow { font-size: .74rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.stack { display: grid; gap: 12px; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.stack.tight { gap: 3px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.spread { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.card { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 18px; min-width: 0; display: grid; gap: 10px; }
+.card.quiet { box-shadow: none; background: transparent; border: 1.5px dashed var(--paper-rule); }
+.tnum { font-variant-numeric: tabular-nums; }
+.tight-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+.btn { border: 0; border-radius: 999px; padding: 11px 20px; font-weight: 700; background: var(--accent); color: var(--on-accent); display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; text-decoration: none; max-width: 100%; text-align: center; line-height: 1.25; }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: var(--accent-soft); color: var(--accent); }
+.btn.line { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn.small { padding: 8px 14px; min-height: 40px; font-size: .9rem; }
+.btn.wide { width: 100%; }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.icon-btn { border: 1.5px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: .86rem; font-weight: 700; min-height: 38px; display: inline-flex; gap: 6px; align-items: center; color: var(--ink); text-align: left; }
+.icon-btn.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip { display: inline-flex; align-items: center; font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.chip.done { background: var(--ok-soft); color: var(--ok); }
+.bar { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width .4s ease; }
+.bar.ok > i { background: var(--ok); }
+
+/* Inicio */
+.hero { background: var(--accent); color: var(--on-accent); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; position: relative; overflow: hidden; }
+.hero::after { content: "§"; position: absolute; right: -8px; top: -38px; font-family: var(--font-display); font-size: 11rem; line-height: 1; opacity: .13; pointer-events: none; }
+.hero h1 { font-size: 2.3rem; color: var(--on-accent); }
+.hero .sub { opacity: .92; max-width: 46ch; }
+.eyebrow.on-acc { color: var(--on-accent); opacity: .8; }
+.hero-meter { display: grid; gap: 6px; margin-top: 4px; font-weight: 700; font-size: .92rem; }
+.hero .bar { background: rgba(255,255,255,.28); }
+.hero .bar > i { background: var(--on-accent); }
+.next-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start; }
+.big-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); display: grid; place-items: center; font-size: 1.6rem; }
+.due { border: 2px solid var(--accent); }
+.mission-l { display: flex; gap: 10px; align-items: center; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 0; width: 100%; text-align: left; }
+.mission-l .t { flex: 1; min-width: 0; font-weight: 700; }
+.method-l { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.method-l li::marker { color: var(--accent); font-weight: 800; }
+.motiv { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; color: var(--accent); }
+
+/* Aprender */
+.route { display: grid; gap: 8px; }
+.lrow { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--line); text-align: left; width: 100%; }
+.lrow .n { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; color: var(--accent); font-family: var(--font-display); font-size: 1.05rem; }
+.lrow.done .n { background: var(--ok); border-color: var(--ok); color: var(--on-accent); font-family: var(--font-body); }
+.lrow .tt { font-weight: 700; line-height: 1.3; }
+.lrow .meta { font-size: .8rem; color: var(--muted); line-height: 1.35; }
+.lrow .ic { font-size: 1.3rem; }
+.back { border: 0; background: none; color: var(--accent); font-weight: 800; padding: 6px 0; justify-self: start; }
+.lesson-top { display: grid; gap: 8px; }
+.goal { font-size: .95rem; color: var(--muted); }
+.steps-dots { display: flex; gap: 4px; }
+.steps-dots i { flex: 1; height: 6px; border-radius: 99px; background: var(--surface-2); }
+.steps-dots i.on { background: var(--accent); }
+.steps-dots i.cur { background: var(--accent-2); }
+.sheet { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 20px 18px 20px 30px; position: relative; display: grid; gap: 12px; min-width: 0; }
+.sheet::before { content: ""; position: absolute; left: 14px; top: 16px; bottom: 16px; width: 2px; background: var(--paper-rule); border-radius: 2px; }
+.sheet h2 { color: var(--accent); }
+.sheet .body { font-size: 1.07rem; line-height: 1.7; }
+.nav-btns { display: flex; gap: 10px; }
+.nav-btns .btn { flex: 1; }
+.callout { border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; }
+.callout.trap { background: var(--bad-soft); }
+.callout.trap h3 { color: var(--bad); }
+.callout.trick { background: var(--accent-soft); }
+.callout.trick h3 { color: var(--accent); }
+.callout ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.ta { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--bg); resize: vertical; min-height: 140px; line-height: 1.55; }
+.model { background: var(--ok-soft); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.check { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--line); }
+.check input { width: 22px; height: 22px; accent-color: var(--accent); flex: none; margin-top: 2px; }
+
+/* Visuales */
+.vis { min-width: 0; }
+.line-wrap { overflow-x: auto; padding-bottom: 6px; }
+.line { display: flex; min-width: max-content; }
+.line-item { width: 138px; display: grid; gap: 4px; justify-items: center; align-content: start; text-align: center; position: relative; padding: 0 6px; }
+.line-item::before { content: ""; position: absolute; top: calc(2.6em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.line-age { font-size: .78rem; font-weight: 800; color: var(--accent); min-height: 2.6em; display: grid; align-items: end; line-height: 1.2; }
+.line-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); border: 3px solid var(--surface); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.line-t { font-weight: 700; font-size: .88rem; line-height: 1.2; }
+.line-s { font-size: .76rem; color: var(--muted); line-height: 1.3; }
+.flow { display: grid; gap: 4px; }
+.flow-step { display: flex; gap: 10px; align-items: flex-start; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+.flow-step b { display: block; line-height: 1.25; }
+.flow-step small { display: block; line-height: 1.4; margin-top: 2px; color: var(--muted); font-size: .88rem; }
+.flow-n { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: .8rem; }
+.flow-arrow { text-align: center; color: var(--muted); line-height: 1; font-size: .9rem; }
+.tbl-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); }
+.tbl { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 420px; }
+.tbl th { background: var(--accent-soft); color: var(--accent); text-align: left; padding: 8px 10px; font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; }
+.tbl td { padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: top; line-height: 1.4; }
+.tree { display: grid; gap: 10px; justify-items: center; }
+.tree-root { background: var(--accent); color: var(--on-accent); padding: 8px 18px; border-radius: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.tree-kids { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; width: 100%; }
+.tree-kid { border: 2px solid var(--accent); border-radius: 12px; padding: 10px; display: grid; gap: 4px; }
+.tree-kid small { color: var(--muted); line-height: 1.35; }
+.vs { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 8px; }
+.vs-col { background: var(--surface-2); border-radius: 12px; padding: 12px; min-width: 0; }
+.vs-h { font-weight: 800; font-size: .82rem; letter-spacing: .03em; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; }
+.vs-col ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; font-size: .93rem; line-height: 1.4; }
+.vs-mid { align-self: center; font-family: var(--font-display); color: var(--muted); }
+@media (max-width: 480px) { .vs { grid-template-columns: minmax(0,1fr); } .vs-mid { justify-self: center; } }
+.pairs { display: grid; gap: 6px; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 12px; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: .93rem; line-height: 1.4; }
+@media (max-width: 480px) { .pair { grid-template-columns: minmax(0,1fr); gap: 2px; } }
+.bookq, .nowbox { border-radius: 4px 14px 14px 4px; border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 12px 14px; display: grid; gap: 6px; }
+.nowbox { border-left-color: var(--warn); background: var(--warn-soft); }
+.bookq-h { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.nowbox .bookq-h { color: var(--warn); }
+.bookq-b { font-size: .98rem; line-height: 1.55; }
+
+/* Preguntas */
+.q { gap: 12px; }
+.q-text { font-size: 1.07rem; font-weight: 700; line-height: 1.5; }
+.qn { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: .8rem; margin-right: 8px; vertical-align: 2px; }
+.opts { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: center; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 10px 12px; min-height: 50px; line-height: 1.4; }
+.opt .ov { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; font-size: .82rem; color: var(--muted); }
+.opt:not([disabled]):hover { border-color: var(--accent); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ok .ov { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.opt.no { border-color: var(--bad); background: var(--bad-soft); }
+.opt.no .ov { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.opt[disabled] { cursor: default; }
+.fb { border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.fb.ok { background: var(--ok-soft); }
+.fb.no { background: var(--bad-soft); }
+.fb b.h { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.fb.ok b.h { color: var(--ok); }
+.fb.no b.h { color: var(--bad); }
+.fb .pg { font-size: .8rem; font-weight: 700; color: var(--muted); }
+.grade { justify-items: center; text-align: center; padding: 22px; }
+.grade > b { font-family: var(--font-display); font-weight: 400; font-size: 4rem; line-height: 1; color: var(--accent); }
+.review-item { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 4px; font-size: .95rem; overflow-wrap: anywhere; }
+.review-item .ok { color: var(--ok); font-weight: 700; }
+.search { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 14px; background: var(--surface); min-height: 46px; }
+
+/* Practicar */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; }
+.tile { border: 0; text-align: left; background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 14px; display: grid; gap: 4px; align-content: start; min-height: 112px; }
+.tile .ti { font-size: 1.5rem; }
+.tile b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.tile span:last-child { font-size: .84rem; color: var(--muted); line-height: 1.35; }
+.tf-card { text-align: center; font-size: 1.2rem; font-weight: 700; padding: 30px 18px; line-height: 1.45; }
+.tf-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.order-list { display: grid; gap: 8px; }
+.order-item { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 8px 10px; line-height: 1.35; }
+.order-item .on { font-weight: 800; color: var(--accent); text-align: center; }
+.order-item .mv { display: flex; gap: 4px; }
+.order-item .mv button { width: 40px; height: 40px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface-2); font-weight: 800; }
+.order-item .mv button[disabled] { opacity: .3; }
+.order-item.good { border-color: var(--ok); background: var(--ok-soft); }
+.order-item.badp { border-color: var(--bad); background: var(--bad-soft); }
+.match-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+.match-grid .stack { gap: 8px; }
+.match-grid button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px; min-height: 56px; font-size: .92rem; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.match-grid button.sel { border-color: var(--accent); background: var(--accent-soft); }
+.match-grid button.done { border-color: var(--ok); background: var(--ok-soft); opacity: .7; }
+.match-grid button.err { border-color: var(--bad); background: var(--bad-soft); }
+.flip { perspective: 1000px; border: 0; background: none; padding: 0; width: 100%; }
+.flip-in { position: relative; min-height: 240px; transition: transform .5s; transform-style: preserve-3d; }
+.flip.on .flip-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; padding: 24px; display: grid; place-items: center; text-align: center; font-size: 1.25rem; font-weight: 700; line-height: 1.4; box-shadow: var(--shadow); }
+.face.front { background: var(--surface); border: 2px solid var(--paper-rule); }
+.face.back { background: var(--accent); color: var(--on-accent); transform: rotateY(180deg); font-size: 1.05rem; font-weight: 600; }
+.face small { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.face small.hint-s { margin: 12px 0 0; }
+
+/* Crucigrama */
+.cw-wrap { overflow-x: auto; padding: 4px 0 8px; }
+.cw { display: grid; gap: 2px; width: max-content; margin: 0 auto; }
+.cw-x { width: var(--cw); height: var(--cw); }
+.cw-c { position: relative; width: var(--cw); height: var(--cw); background: var(--surface); border: 1.5px solid var(--paper-rule); border-radius: 4px; display: block; }
+.cw-c i { position: absolute; top: 0; left: 2px; font-size: 8px; font-style: normal; font-weight: 800; color: var(--muted); line-height: 1; pointer-events: none; }
+.cw-c input { width: 100%; height: 100%; border: 0; background: transparent; text-align: center; font-weight: 800; font-size: .82rem; padding: 4px 0 0; text-transform: uppercase; color: var(--ink); caret-color: var(--accent); }
+.cw-c input:focus { outline: none; }
+.cw-c:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.cw-c.hl { background: var(--accent-soft); }
+.cw-c.good { background: var(--ok-soft); border-color: var(--ok); }
+.cw-c.bad { background: var(--bad-soft); border-color: var(--bad); }
+.cw-now { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding: 12px 14px; font-size: .95rem; }
+.clues { display: grid; gap: 6px; }
+.clue { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 8px; text-align: left; border: 0; background: var(--surface-2); border-radius: 10px; padding: 8px 10px; line-height: 1.35; font-size: .93rem; }
+.clue b { color: var(--accent); }
+.clue.on { outline: 2px solid var(--accent); }
+.clue.solved { opacity: .55; text-decoration: line-through; }
+@media (min-width: 560px) { :root { --cw: 32px; } .cw-c input { font-size: 1rem; } .cw-c i { font-size: 9px; } }
+
+/* Videos y avance */
+.vrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }
+@media (max-width: 420px) { .vrow { grid-template-columns: minmax(0,1fr); } }
+.trust { background: var(--accent-soft); box-shadow: none; }
+.link { font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.stat { background: var(--surface); border-radius: var(--r); padding: 14px 12px; box-shadow: var(--shadow); display: grid; gap: 2px; min-width: 0; }
+.stat b { font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--accent); line-height: 1; }
+.stat span { font-size: .78rem; color: var(--muted); line-height: 1.3; }
+.evidence { border: 2px solid var(--ok); box-shadow: none; }
+.unitbar { display: grid; gap: 5px; }
+
+/* Navegación */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); }
+.tabbar-in { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); }
+.tab { border: 0; background: none; padding: 8px 0 9px; display: grid; justify-items: center; gap: 2px; font-size: .66rem; font-weight: 700; color: var(--muted); min-height: 58px; }
+.tab svg { width: 24px; height: 24px; }
+.tab.on { color: var(--accent); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(78px + env(safe-area-inset-bottom, 0px)); z-index: 50; background: var(--ink); color: var(--bg); border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: .92rem; box-shadow: var(--shadow); max-width: calc(100% - 32px); text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* v2 · guía, lectura guiada, examen, glosario, hoja interactiva */
+.guide { border: 2px solid var(--accent); }
+.secmap { display: grid; gap: 8px; }
+.sec { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 12px; align-items: start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 12px; line-height: 1.4; }
+.sec b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--accent); }
+.sec span span { font-size: .9rem; }
+.sec small { color: var(--muted); font-size: .8rem; }
+.sec-ic { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.sec-ic svg { width: 22px; height: 22px; }
+.howto { background: var(--accent-soft); box-shadow: none; }
+.phase-legend { display: grid; gap: 6px; font-size: .9rem; }
+.phase-legend span b { color: var(--accent); margin-right: 6px; }
+.phasebar { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 4px; }
+.ph { border: 0; border-top: 5px solid var(--surface-2); background: none; padding: 6px 0 0; font-size: .7rem; font-weight: 800; color: var(--muted); text-align: left; letter-spacing: .02em; }
+.ph.on { border-top-color: var(--accent); color: var(--accent); }
+.ph.cur { border-top-color: var(--accent-2); color: var(--ink); }
+.plan { display: grid; gap: 6px; }
+.plan-r { display: grid; grid-template-columns: 26px minmax(0,1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border-radius: 12px; padding: 9px 12px; }
+.plan-r small { display: block; color: var(--muted); font-size: .85rem; line-height: 1.35; }
+.tips { background: var(--warn-soft); box-shadow: none; }
+.tips h2 { color: var(--warn); }
+.frag { border-left: 5px solid var(--paper-rule); }
+.frag.fdone { border-left-color: var(--ok); }
+.fr-where { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; font-size: .95rem; font-style: italic; }
+.lab { font-style: normal; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-right: 6px; }
+.fr-look { font-size: 1.02rem; }
+.case-s { background: var(--surface-2); border-radius: 12px; padding: 12px; line-height: 1.55; }
+.chip.fmt { vertical-align: 2px; margin-right: 4px; }
+.opt.picked { border-color: var(--accent); background: var(--accent-soft); }
+.opt.picked .ov { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.qnav { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 5px; }
+.qnav button { height: 34px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); font-size: .78rem; font-weight: 700; }
+.qnav button.ans { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.qnav button.cur { outline: 2px solid var(--ink); }
+.exrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; }
+.exn { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.review-item .yo { color: var(--bad); }
+.linkbtn { border: 0; background: none; color: var(--accent); font-weight: 700; padding: 2px 0; text-align: left; justify-self: start; }
+.gloss { display: grid; gap: 8px; }
+.gterm { background: var(--surface); border-radius: 14px; padding: 14px; display: grid; gap: 6px; border: 1.5px solid var(--line); }
+.gterm > .spread b { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; color: var(--accent); }
+.gex { font-size: .92rem; color: var(--muted); }
+.vrow { display: grid; gap: 10px; }
+.vq { font-size: .92rem; }
+.sel { user-select: all; -webkit-user-select: all; color: var(--accent); font-weight: 700; }
+.url { font-weight: 400; overflow-wrap: anywhere; font-size: .78rem; }
+.tl-wrap { overflow-x: auto; padding-bottom: 6px; }
+.tl { display: flex; min-width: max-content; }
+.tl-i { width: 92px; border: 0; background: none; display: grid; justify-items: center; gap: 4px; text-align: center; position: relative; padding: 0 4px; align-content: start; }
+.tl-i::before { content: ""; position: absolute; top: calc(1.3em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.tl-y { font-size: .74rem; font-weight: 800; color: var(--accent); min-height: 1.3em; white-space: nowrap; }
+.tl-d { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); z-index: 1; }
+.tl-i.on .tl-d { background: var(--accent); transform: scale(1.3); }
+.tl-t { font-size: .74rem; font-weight: 700; line-height: 1.2; }
+.tl-i.on .tl-t { color: var(--accent); }
+.tl-card { background: var(--accent-soft); border-radius: 14px; padding: 14px; display: grid; gap: 8px; }
+.rvt th[scope=row] { background: var(--surface-2); color: var(--ink); text-transform: none; letter-spacing: 0; font-size: .85rem; vertical-align: top; }
+.rv { width: 100%; min-height: 44px; border: 1.5px dashed var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 8px; text-align: left; font-size: .88rem; line-height: 1.35; color: var(--ink); }
+.rv span { color: var(--accent); font-weight: 700; font-size: .78rem; }
+.rv.open { border-style: solid; border-color: var(--line); background: var(--surface); }
+.era { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+.era-g { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 6px 10px; align-items: center; }
+.era-g .lab { margin: 0; }
+@media (max-width: 480px) { .era-g { grid-template-columns: minmax(0,1fr); } }
+.clue-r { display: flex; gap: 10px; align-items: flex-start; font-size: 1.05rem; }
+.vt { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; }
+.vid { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.vid > .vid-play + .stack, .vid { grid-template-columns: minmax(0,1fr); }
+.vid-play { display: none; }
+.ojo { background: var(--warn-soft); border-radius: 10px; padding: 8px 10px; }
+.ok-n { color: var(--ok); font-weight: 700; }
+
+
+/* ═══ v3 · Capítulo 3 · ajustes por el cuestionario de Carmen ═══ */
+body { font-size: 18px; }
+.app { padding-block: 18px calc(110px + env(safe-area-inset-bottom, 0px)); }
+.tabbar-in { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tab { font-size: .78rem; min-height: 62px; }
+.btn { min-height: 56px; font-size: 1rem; }
+.btn.small { min-height: 44px; }
+.btn.tall { flex-direction: column; gap: 2px; padding-block: 12px; }
+.btn.tall small { font-weight: 400; opacity: .85; }
+.btn.danger { color: var(--bad); border-color: var(--bad); }
+.tight-6 { gap: 6px; }
+
+/* Inicio: un solo botón grande */
+.home { gap: 14px; }
+.btn.big { flex-direction: column; gap: 4px; min-height: 92px; border-radius: 22px; padding: 16px 20px; box-shadow: 0 6px 18px rgba(194, 24, 91, .28); }
+.big-t { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; line-height: 1.1; }
+.big-s { font-weight: 400; font-size: .92rem; opacity: .95; line-height: 1.35; }
+details.more { background: var(--surface); border-radius: var(--r); border: 1.5px solid var(--line); }
+details.more > summary { list-style: none; cursor: pointer; padding: 14px 18px; font-weight: 700; color: var(--muted); display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: "▾"; transition: transform .2s; }
+details.more[open] > summary::after { transform: rotate(180deg); }
+details.more > .stack { padding: 0 12px 12px; }
+.mission-l { min-height: 54px; color: var(--ink); }
+.motiv-s { font-family: var(--font-display); color: var(--accent); font-size: 1.1rem; line-height: 1.3; padding: 4px 8px; }
+.hero h1 { font-size: 2.1rem; }
+
+/* Modo enfocado */
+.focus .ftop { position: sticky; top: 0; z-index: 15; background: var(--bg); display: flex; gap: 12px; align-items: center; padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); max-width: 720px; margin: 0 auto; }
+.xbtn { flex: none; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 14px; min-height: 44px; font-weight: 700; }
+.fstep { display: grid; min-width: 0; line-height: 1.25; }
+.fstep b { font-size: .98rem; }
+.fstep span { font-size: .82rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar.thin { height: 6px; max-width: 688px; margin: 0 auto; }
+.focus .bar.thin { margin-inline: max(16px, calc((100% - 688px) / 2)); }
+.focus-main { padding-top: 14px; }
+.fbot { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; gap: 10px; align-items: center; justify-content: center; }
+.fbot > * { max-width: 520px; }
+.back-l { flex: none; border: 0; background: none; color: var(--muted); font-weight: 700; padding: 10px 6px; min-height: 48px; }
+.back-l[disabled] { opacity: .3; }
+.btn.big-n { flex: 1; min-height: 60px; font-size: 1.1rem; border-radius: 18px; }
+.btn.big-n.wide { width: 100%; }
+.sheet .body { font-size: 1.1rem; }
+.sheet > .say.wide { justify-self: stretch; }
+
+/* Botón de voz */
+.say { border: 2px solid var(--accent); background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 8px 16px; min-height: 48px; font-weight: 800; display: inline-flex; gap: 8px; align-items: center; justify-content: center; justify-self: start; max-width: 100%; }
+.say.wide { width: 100%; min-height: 56px; font-size: 1.05rem; }
+.say .ic { font-size: 1.2rem; }
+.say.on { background: var(--accent); color: var(--on-accent); }
+.fb .say, .model .say, .gterm .say { justify-self: start; }
+
+/* Palabras difíciles */
+.hw { border: 0; background: none; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; display: inline; line-height: inherit; }
+.hw-q, .hw-demo .hw-q { display: inline-grid; place-items: center; width: 1.05em; height: 1.05em; margin-left: 2px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-size: .62em; font-weight: 800; vertical-align: .55em; text-decoration: none; }
+.hw-demo { text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; }
+.scrim { position: fixed; inset: 0; background: rgba(20, 5, 12, .45); z-index: 40; }
+.bsheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 41; background: var(--surface); border-radius: 22px 22px 0 0; padding: 10px 20px calc(20px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 10px; max-width: 720px; margin: 0 auto; box-shadow: 0 -8px 30px rgba(0, 0, 0, .2); max-height: 80vh; overflow-y: auto; }
+.grab { width: 44px; height: 5px; border-radius: 99px; background: var(--line); justify-self: center; margin-bottom: 6px; }
+.bsheet h2 { color: var(--accent); font-size: 1.6rem; }
+.modal { position: fixed; z-index: 41; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(420px, calc(100% - 32px)); background: var(--surface); border-radius: 22px; padding: 24px 20px; display: grid; gap: 12px; text-align: center; box-shadow: var(--shadow); }
+.big-emoji { font-size: 3rem; line-height: 1; }
+.toast { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+
+/* Cuadro sinóptico con llaves */
+.sn-wrap { padding: 4px 0; }
+.sn { display: flex; align-items: center; }
+.sn-root { flex: none; background: var(--accent); color: var(--on-accent); font-family: var(--font-display); font-size: 1.08rem; line-height: 1.2; padding: 10px 12px; border-radius: 12px; max-width: 140px; text-align: center; }
+.sn-brace { flex: none; align-self: stretch; width: 14px; margin: 4px 6px 4px 12px; border: 3px solid var(--accent); border-right: 0; border-radius: 16px 0 0 16px; position: relative; }
+.sn-brace::before { content: ""; position: absolute; left: -12px; top: 50%; width: 10px; height: 3px; background: var(--accent); transform: translateY(-50%); }
+.sn-list { display: grid; gap: 12px; min-width: 0; flex: 1; }
+.sn-br { display: flex; align-items: center; min-width: 0; }
+.sn-bt { flex: none; width: 130px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 7px 10px; line-height: 1.25; font-size: .95rem; }
+.sn-brace.sm { width: 10px; margin: 2px 4px 2px 10px; border-width: 2px; border-radius: 10px 0 0 10px; }
+.sn-brace.sm::before { left: -9px; width: 7px; height: 2px; }
+.sn-kids { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: .94rem; line-height: 1.32; min-width: 0; flex: 1; }
+.sn-kids li { padding: 1px 0; }
+@media (max-width: 560px) {
+  .sn { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .sn-root { grid-column: 1 / -1; justify-self: start; max-width: none; text-align: left; margin-bottom: 4px; }
+  .sn > .sn-brace { margin: 2px 8px 2px 14px; }
+  .sn > .sn-brace::before { left: -3px; top: -8px; width: 3px; height: 8px; transform: none; }
+  .sn-br { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 0; }
+  .sn-bt { grid-column: 1 / -1; width: auto; justify-self: start; }
+  .sn-br > .sn-brace.sm { margin-left: 10px; }
+}
+
+/* Estación */
+.callout.trap > summary { cursor: pointer; font-weight: 800; color: var(--bad); min-height: 44px; display: flex; align-items: center; }
+.callout.trap[open] > summary { margin-bottom: 4px; }
+.trick { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
+.model p { line-height: 1.55; }
+.done-card { background: var(--accent-soft); box-shadow: none; }
+.plan-r > span { font-size: 1.3rem; }
+.tile.fav { border: 2px solid var(--accent); }
+.audio-row { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+@media (max-width: 400px) { .audio-row { grid-template-columns: minmax(0, 1fr); } }
+.lrow .tt { display: block; }
+.lrow .meta { display: block; }
+
+/* Recorrido */
+.tour-s { justify-items: center; }
+.tour-s .body { text-align: center; }
+.phone { width: min(280px, 100%); border: 3px solid var(--line); border-radius: 26px; padding: 16px 14px; background: var(--bg); display: grid; gap: 10px; text-align: left; font-size: .9rem; }
+.m-hero { background: var(--accent); color: var(--on-accent); border-radius: 14px; padding: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.m-btn { background: var(--accent); color: var(--on-accent); border-radius: 16px; padding: 12px; text-align: center; font-weight: 800; display: grid; }
+.m-btn small { font-weight: 400; }
+.m-line { border: 1.5px solid var(--line); border-radius: 999px; padding: 8px; text-align: center; font-size: .82rem; color: var(--muted); }
+.m-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; text-align: center; font-size: .68rem; font-weight: 700; color: var(--muted); }
+.m-steps span { border-top: 5px solid var(--surface-2); padding-top: 4px; }
+.m-steps span.on { border-top-color: var(--accent); color: var(--accent); }
+.m-sheet { background: var(--surface); border-radius: 14px; padding: 12px; box-shadow: var(--shadow); }
+.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(224, 74, 134, .55); } 50% { box-shadow: 0 0 0 10px rgba(224, 74, 134, 0); } }
+.tour .fbot .btn.line { flex: none; min-height: 56px; }
+
+/* Tablas que caben en el celular */
+.tbl { min-width: 0; }
+.tbl td, .tbl th { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .tbl { font-size: .86rem; } .tbl th, .tbl td { padding: 8px 7px; } }
+
+.cw { --cwmax: 24px; }
+@media (min-width: 560px) { .cw { --cwmax: 32px; } }
+
+</style>
+</head>
+<body>
+<div id="app"><p style="padding:24px">Cargando tu plataforma…</p></div>
+<noscript><p style="padding:24px">Activa JavaScript para usar la plataforma.</p></noscript>
+<script>
+const V = {
+  line(items) {
+    return `<div class="vis line-wrap"><div class="line">${items.map((it) =>
+      `<div class="line-item"><div class="line-age">${it.a}</div><div class="line-dot"></div><div class="line-t">${it.t}</div>${it.s ? `<div class="line-s">${it.s}</div>` : ''}</div>`).join('')}</div></div>`;
+  },
+  flow(items) {
+    return `<div class="vis flow">${items.map((it, i) =>
+      `<div class="flow-step"><span class="flow-n">${i + 1}</span><div><b>${it.t}</b>${it.s ? `<small>${it.s}</small>` : ''}</div></div>`).join('<div class="flow-arrow" aria-hidden="true">↓</div>')}</div>`;
+  },
+  tbl(head, rows) {
+    return `<div class="vis tbl-wrap"><table class="tbl"><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((c, i) => i === 0 ? `<td><b>${c}</b></td>` : `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  },
+  vs(a, b) {
+    const col = c => `<div class="vs-col"><div class="vs-h">${c.t}</div><ul>${c.items.map(x => `<li>${x}</li>`).join('')}</ul></div>`;
+    return `<div class="vis vs">${col(a)}<div class="vs-mid">vs</div>${col(b)}</div>`;
+  },
+  pairs(list) {
+    return `<div class="vis pairs">${list.map(p => `<div class="pair"><b>${p[0]}</b><span>${p[1]}</span></div>`).join('')}</div>`;
+  },
+  /* Cuadro sinóptico con llaves: raíz { ramas { hojas */
+  sinop(root, br) {
+    const kids = k => `<ul class="sn-kids">${k.map(x => `<li>${x}</li>`).join('')}</ul>`;
+    return `<div class="vis sn-wrap"><div class="sn"><div class="sn-root">${root}</div><div class="sn-brace" aria-hidden="true"></div><div class="sn-list">${br.map(b =>
+      `<div class="sn-br"><div class="sn-bt">${b.t}</div><div class="sn-brace sm" aria-hidden="true"></div>${kids(b.kids)}</div>`).join('')}</div></div></div>`;
+  },
+  tree(root, kids) { return V.sinop(root, kids.map(k => ({ t: k.t, kids: k.s ? [k.s] : [] }))); },
+  book(page, html) {
+    return `<div class="vis bookq"><div class="bookq-h">Lo que dice el libro · pág. ${page}</div><div class="bookq-b">${html}</div></div>`;
+  },
+  now(html) {
+    return `<div class="vis nowbox"><div class="bookq-h">Dato actual · no viene en el libro (es de 2014)</div><div class="bookq-b">${html}</div></div>`;
+  }
+};
+
+
+/* ═══════════ CONTENIDO · Díaz-Aranda, Enrique, Lecciones de derecho penal para el nuevo sistema de justicia en México, UNAM-IIJ, 2014. Segunda parte, Capítulo noveno «Excluyentes de la culpabilidad» (págs. 183 a 197). ═══════════ */
+const BOOK = {
+  title: 'Lecciones de derecho penal para el nuevo sistema de justicia en México',
+  author: 'Enrique Díaz-Aranda',
+  pub: 'UNAM, Instituto de Investigaciones Jurídicas · STRAF, 2014',
+  chapter: 'Segunda parte · Capítulo noveno: «Excluyentes de la culpabilidad» (págs. 183 a 197)',
+  url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805'
+};
+const STUDENT = { name: 'Carmen' };
+const CHAP = {
+  n: 14, word: 'catorce', short: 'Excluyentes de la culpabilidad', pages: '183 a 197', key: 'carmen-penal-cap14-v1',
+  exA: [0, 3], exB: [1, 4],
+  tourRead: ['Quedará excluida la culpabilidad si al analizar las circunstancias', '¡cualquiera habría hecho lo mismo!'],
+  tourWord: ['El juez actuó con ', 'temor fundado', '.', 'Temor fundado', 'Amenaza real, grave e inminente que lleva a actuar contra el derecho…']
+};
+
+/* ═══════════ ESTACIONES ═══════════ */
+const LESSONS = [];
+
+LESSONS.push({
+  id: 'puente', icon: '🧭', era: 'Antes de empezar', title: 'Cuando no se puede reprochar', pages: '183', mins: 6, bridge: true,
+  goal: 'Conocer las dos grandes formas en que se excluye la culpabilidad.',
+  steps: [
+    { h: 'Imagina que…', t: 'Ya sabes que la culpabilidad es un <b>reproche</b>. Pero a veces <mark>no se le puede reprochar nada a la persona</mark>: porque no podía comprender, o porque cualquiera en su lugar habría hecho lo mismo. Ese es el tema del último capítulo.' },
+    { h: 'El mapa', t: 'La culpabilidad se excluye de dos formas:',
+      v: () => V.sinop('Excluyentes de la culpabilidad', [
+        { t: 'I. Inimputabilidad', kids: ['Minoría de edad', 'Trastorno mental permanente', 'Trastorno transitorio (miedo grave)'] },
+        { t: 'II. Inexigibilidad de otra conducta', kids: ['Temor fundado', 'Estado de necesidad exculpante', 'Error de prohibición', 'Error de justificación'] }]) }
+  ],
+  sinop: { root: 'Excluyentes de la culpabilidad', br: [
+    { t: 'Inimputabilidad', kids: ['No podía comprender'] },
+    { t: 'Inexigibilidad', kids: ['Cualquiera habría hecho lo mismo'] },
+    { t: 'Efecto', kids: ['Se excluye el delito'] },
+    { t: 'Pero', kids: ['El injusto sigue existiendo'] }] },
+  trap: ['Si se excluye la culpabilidad, el hecho sigue siendo un <b>injusto</b> (típico y antijurídico).'],
+  trick: '<b>«No podía entender o no se le podía exigir»</b>.',
+  explain: { q: '¿De qué formas se excluye la culpabilidad?', model: 'De dos formas. Por inimputabilidad, cuando la persona no podía comprender: por ser menor de 18 años o por un trastorno mental permanente o transitorio, como el miedo grave. Y por inexigibilidad de otra conducta, cuando cualquiera en su lugar habría hecho lo mismo: temor fundado, estado de necesidad exculpante, error de prohibición y error de justificación. En todos los casos se excluye el delito, aunque el hecho sigue siendo un injusto.', keys: ['Inimputabilidad', 'Inexigibilidad', 'Menor de edad', 'Trastorno mental', 'Temor fundado', 'Errores'] }
+});
+
+LESSONS.push({
+  id: 'menores', icon: '🧒', era: 'I.1 · Minoría de edad', title: 'Adolescentes y medidas', pages: '183–184', mins: 10,
+  goal: 'Conocer cómo responde el derecho penal ante los injustos cometidos por menores de 18 años.',
+  steps: [
+    { h: 'Imagina que…', t: 'Un joven de 17 años participa en un asalto armado en un autobús. El hecho es típico y antijurídico: es un <b>injusto</b>. Pero por su edad <mark>no es imputable</mark>. ¿Queda impune? No: el derecho penal responde con una <b>medida</b>.' },
+    { h: 'Tres edades', t: '',
+      v: () => V.tbl(['Edad al cometer el injusto', '¿Qué procede?'], [['Menos de 12 años', 'Son niños: no tienen responsabilidad penal (LFJA, art. 13)'], ['De 12 a menos de 18', 'Medidas para adolescentes (LFJA, art. 1)'], ['18 años o más', 'Pena']]) },
+    { h: '¿Para qué son las medidas?', t: 'La LFJA prevé medidas de <b>orientación y protección</b> y de <b>internamiento</b>. Según su artículo 78, buscan una <mark>justicia restaurativa</mark>, la reintegración social y familiar del adolescente y darle una experiencia de legalidad y de respeto a los demás, con apoyo de la familia y la comunidad.' },
+    { h: 'Derecho penal y de medidas', t: 'El libro cuenta casos reales de adolescentes de 16 y 17 años que cometieron injustos graves: no eran culpables por su edad, pero el injusto no quedó impune. Por eso hoy se dice <b>derecho penal y de medidas de seguridad</b>. Incluso en un caso muy conocido de un adolescente de 14 años ligado a un cártel, <mark>se le debía juzgar con las reglas para adolescentes</mark>.' }
+  ],
+  sinop: { root: 'Minoría de edad', br: [
+    { t: 'Menos de 12', kids: ['Niños: sin responsabilidad'] },
+    { t: '12 a 18', kids: ['Medidas (LFJA)', 'Orientación, protección, internamiento'] },
+    { t: 'Fin (art. 78)', kids: ['Justicia restaurativa', 'Reintegración'] },
+    { t: 'Efecto', kids: ['Sin culpabilidad', 'Pero sí hay medida'] }] },
+  trap: ['El menor de 18 <b>no</b> queda impune: recibe una <b>medida</b>, no una pena.', 'Los menores de <b>12</b> años no tienen responsabilidad penal.'],
+  trick: '<b>«Menos de 12, nada; de 12 a 18, medida; desde 18, pena»</b>.',
+  explain: { q: '¿Qué pasa cuando un menor de 18 años comete un injusto?', model: 'No es imputable, así que se excluye su culpabilidad, pero el injusto no queda impune. Los menores de 12 años son niños y no tienen responsabilidad penal. De 12 a menos de 18 años se aplican las medidas de la Ley Federal de Justicia para Adolescentes, de orientación, protección o internamiento, que según su artículo 78 buscan la justicia restaurativa y la reintegración social y familiar. Desde los 18 se aplica la pena. Por eso hoy se habla de derecho penal y de medidas de seguridad.', keys: ['Inimputable', 'Menos de 12: niños', '12 a 18: medidas', 'LFJA', 'Justicia restaurativa', 'No queda impune'] }
+});
+
+LESSONS.push({
+  id: 'trastorno', icon: '🧠', era: 'I.2 · Trastorno mental', title: 'Permanente o transitorio', pages: '185–186', mins: 10,
+  goal: 'Distinguir el trastorno mental permanente del transitorio y saber cómo se prueba y qué consecuencias tiene.',
+  steps: [
+    { h: 'Imagina que…', t: 'Unos amigos ponen una droga muy fuerte en el refresco de un joven sin que él lo sepa. Bajo sus efectos, maneja y causa un accidente grave. ¿Es culpable? <b>No</b>: su trastorno fue causado por otros. <mark>Los que deben responder son los amigos</mark>.' },
+    { h: 'Dos clases de trastorno', t: '',
+      v: () => V.vs({ t: 'Permanente', items: ['Locura, retraso mental, esquizofrenia, etcétera', 'No puede comprender sus actos', 'No se le impone prisión: se aplica una <b>medida</b> en un centro psiquiátrico'] }, { t: 'Transitorio', items: ['Solo excluye si <b>anula por completo</b> la comprensión', 'Y si fue por causas <b>ajenas</b> a su decisión', 'Si él lo provocó: actio liberae in causa'] }) },
+    { h: 'El artículo 15, fracción VII', t: 'Excluye el delito si, al realizar el hecho, la persona <b>no tiene capacidad de comprender</b> que es ilícito o de conducirse de acuerdo con esa comprensión, por un trastorno mental o desarrollo intelectual retardado, salvo que lo haya provocado ella misma. Si la capacidad solo está <b>disminuida</b>, se aplica el art. 69 bis.' },
+    { h: 'Prueba y límites', t: '',
+      v: () => V.flow([{ t: 'Peritaje de un psiquiatra', s: 'Explica en el juicio oral cómo llegó a su conclusión' }, { t: 'La medida solo va después de un injusto', s: 'No sirve para «prevenir»: la simple peligrosidad no basta' }, { t: 'Tiene un límite', s: 'No puede durar más que la pena máxima del injusto' }]) }
+  ],
+  sinop: { root: 'Trastorno mental', br: [
+    { t: 'Permanente', kids: ['No comprende sus actos', 'Medida en centro psiquiátrico'] },
+    { t: 'Transitorio', kids: ['Anula la comprensión', 'Por causas ajenas'] },
+    { t: 'Fr. VII', kids: ['Salvo que lo provocó', 'Disminuida: art. 69 bis'] },
+    { t: 'Límites', kids: ['Peritaje', 'Sin medidas preventivas', 'No más que la pena máxima'] }] },
+  trap: ['La medida de seguridad <b>no</b> se aplica por simple peligrosidad: solo después de un injusto.', 'La medida no puede durar más que la <b>pena máxima</b> del injusto.', 'El trastorno transitorio solo excluye si fue por causas <b>ajenas</b>.'],
+  trick: '<b>«Si no puede entender, no se le reprocha; pero se le atiende»</b>.',
+  explain: { q: '¿Cómo excluye la culpabilidad un trastorno mental?', model: 'Según la fracción VII del artículo 15, se excluye el delito si al realizar el hecho la persona no podía comprender su ilicitud o conducirse conforme a esa comprensión por un trastorno mental o desarrollo intelectual retardado, salvo que ella lo haya provocado. El trastorno permanente, como la esquizofrenia, se prueba con el peritaje de un psiquiatra, y en lugar de prisión se aplica una medida en un centro psiquiátrico, solo después de un injusto y sin superar la pena máxima. El transitorio solo excluye si anula por completo la comprensión y fue por causas ajenas, como una droga puesta a escondidas.', keys: ['Fr. VII', 'Permanente', 'Peritaje psiquiátrico', 'Medida, no prisión', 'Transitorio: causas ajenas', 'Límite: pena máxima'] }
+});
+
+LESSONS.push({
+  id: 'miedo', icon: '😨', era: 'I.2.B · Miedo grave', title: 'Miedo grave y temor fundado', pages: '186–188', mins: 10,
+  goal: 'Distinguir el miedo grave del temor fundado y saber dónde los ubica el autor.',
+  steps: [
+    { h: 'Imagina que…', t: 'Dos personas actúan con miedo. Una está tan aterrada que <b>pierde la razón</b> y actúa por instinto. La otra sabe perfectamente lo que hace, pero alguien la <b>amenaza</b> con un mal grave si no lo hace. ¿Es lo mismo? Para el autor, <mark>no</mark>.' },
+    { h: 'La fracción IX', t: 'Dice que el delito se excluye cuando, por las circunstancias, <b>no sea racionalmente exigible</b> a la persona una conducta diferente, porque no pudo determinarse a actuar conforme a derecho. Ahí se ubican el miedo grave y el temor fundado.' },
+    { h: 'Las diferencias', t: '',
+      v: () => V.vs({ t: 'Miedo grave', items: ['Conmoción psíquica que <b>anula el raciocinio</b>', 'El mal puede ser real o <b>imaginario</b>', 'Para el autor: <b>inimputabilidad</b> (trastorno transitorio)', 'Se prueba con peritos en psicología'] }, { t: 'Temor fundado', items: ['La persona <b>sí comprende</b> lo que hace', 'Hay una <b>amenaza real</b>, grave e inminente de otro (vis compulsiva)', 'Para el autor: <b>inexigibilidad</b> de otra conducta', '«No obra el violentado, sino quien lo violenta»'] }) },
+    { h: 'No basta decirlo', t: 'Los tribunales dicen que no basta con que el acusado diga que tenía miedo: hay que <mark>probarlo</mark>. Para el miedo grave, que es un estado psicofisiológico, se necesita la <b>prueba pericial</b> de especialistas en psicología.' }
+  ],
+  sinop: { root: 'Miedo grave y temor fundado', br: [
+    { t: 'Fr. IX', kids: ['No era exigible otra conducta'] },
+    { t: 'Miedo grave', kids: ['Anula el raciocinio', 'Inimputabilidad'] },
+    { t: 'Temor fundado', kids: ['Amenaza real de otro', 'Inexigibilidad'] },
+    { t: 'Prueba', kids: ['No basta decirlo', 'Peritos en psicología'] }] },
+  trap: ['Para el autor, el <b>miedo grave</b> es inimputabilidad y el <b>temor fundado</b> es inexigibilidad.', 'En el miedo grave el mal puede ser <b>imaginario</b>; en el temor fundado es <b>real</b> y viene de otro.'],
+  trick: '<b>«Miedo: pierdo la razón. Temor: me obligan»</b>.',
+  explain: { q: '¿En qué se distinguen el miedo grave y el temor fundado?', model: 'Los dos están en la fracción IX del artículo 15, que excluye el delito cuando no era racionalmente exigible otra conducta. El miedo grave es una conmoción psíquica que anula el raciocinio, aunque el mal sea imaginario; para el autor es una causa de inimputabilidad por trastorno transitorio, y se prueba con peritos en psicología. El temor fundado, o vis compulsiva, es una amenaza real, grave e inminente de otra persona; quien actúa sí comprende lo que hace, pero no se le puede exigir otra conducta: es inexigibilidad. En ambos casos no basta decirlo: hay que probarlo.', keys: ['Fr. IX', 'Miedo grave: anula la razón', 'Inimputabilidad', 'Temor fundado: amenaza real', 'Inexigibilidad', 'Hay que probarlo'] }
+});
+
+LESSONS.push({
+  id: 'temor', icon: '🚗', era: 'II.1 · Temor fundado', title: '¡Cualquiera habría hecho lo mismo!', pages: '188–190', mins: 10,
+  goal: 'Aplicar la inexigibilidad de otra conducta y el temor fundado a casos concretos.',
+  steps: [
+    { h: 'Imagina que…', t: 'Secuestran al hijo de un juez y amenazan con matarlo si condena a un miembro del grupo criminal. El juez absuelve. Su conducta es típica (art. 225, fr. VI: dictar a sabiendas una sentencia ilícita) y él la comprende. Pero <mark>cualquiera habría hecho lo mismo</mark>: no se le puede exigir otra conducta.' },
+    { h: 'La inexigibilidad', t: 'Se excluye la culpabilidad cuando, al analizar las circunstancias, concluimos que <b>¡cualquiera habría hecho lo mismo!</b> Sus causas son:',
+      v: () => V.flow([{ t: 'Temor fundado' }, { t: 'Estado de necesidad exculpante' }, { t: 'Error de prohibición' }, { t: 'Error de justificación' }]) },
+    { h: 'El conductor rodeado', t: 'Unos manifestantes dañan los coches y amenazan con violencia a los conductores. Uno, que no provocó nada, acelera para huir y lesiona a alguien. ¿Quién podría decir que debió esperar a que lo bajaran y lo golpearan? <b>Cualquiera habría hecho lo mismo</b>: se excluye la culpabilidad.',
+      v: () => V.book('190', 'Pero <b>no</b> hay excluyente si fue el propio conductor quien <b>provocó</b> la agresión: el libro cuenta un caso en que el conductor se bajó a encarar a los manifestantes y luego regresó para embestirlos. Eso es un homicidio calificado, sin excluyente.') }
+  ],
+  sinop: { root: 'Inexigibilidad y temor fundado', br: [
+    { t: 'Regla', kids: ['¡Cualquiera habría hecho lo mismo!'] },
+    { t: 'Causas', kids: ['Temor fundado', 'Necesidad exculpante', 'Errores'] },
+    { t: 'Casos', kids: ['El juez amenazado', 'El conductor rodeado'] },
+    { t: 'Límite', kids: ['Si él provocó, no hay excluyente'] }] },
+  trap: ['En el temor fundado la persona <b>es imputable</b>: entiende lo que hace.', 'Si el conductor <b>provocó</b> la agresión, no hay excluyente.'],
+  trick: '<b>«Si cualquiera lo hubiera hecho, no se le reprocha»</b>.',
+  explain: { q: '¿Qué es la inexigibilidad de otra conducta y cómo se aplica el temor fundado?', model: 'Se excluye la culpabilidad cuando, analizando las circunstancias, concluimos que cualquiera habría hecho lo mismo, así que no se puede exigir otro comportamiento. Sus causas son el temor fundado, el estado de necesidad exculpante, el error de prohibición y el de justificación. En el temor fundado, la persona entiende lo que hace, pero una amenaza grave la obliga: como el juez que absuelve porque secuestraron a su hijo, o el conductor rodeado por manifestantes violentos que acelera para huir. Pero no hay excluyente si la persona provocó la situación.', keys: ['Cualquiera habría hecho lo mismo', 'Temor fundado', 'Es imputable', 'El juez amenazado', 'El conductor', 'Si provocó, no'] }
+});
+
+LESSONS.push({
+  id: 'exculpante', icon: '🛟', era: 'II.2 · Estado de necesidad exculpante', title: 'Dos bienes que valen lo mismo', pages: '190–191', mins: 10,
+  goal: 'Entender el estado de necesidad exculpante y diferenciarlo del justificante.',
+  steps: [
+    { h: 'Imagina que…', t: 'Dos náufragos se aferran a una tabla que solo aguanta a uno. Uno empuja al otro para salvarse. Es la famosa <b>Tabla de Carneades</b>. Las dos vidas valen lo mismo: no se puede <b>justificar</b>, pero tampoco se le puede <mark>reprochar</mark>.' },
+    { h: 'Justificante o exculpante', t: 'Ambos están en la fracción V del artículo 15:',
+      v: () => V.vs({ t: 'Justificante', items: ['Se sacrifica un bien de <b>menor</b> valor', 'El hecho se <b>justifica</b>', 'Se ve en la antijuridicidad'] }, { t: 'Exculpante', items: ['Los bienes valen <b>lo mismo</b>', 'El hecho sigue siendo un injusto', 'Solo se quita el <b>reproche</b> (culpabilidad)'] }) },
+    { h: 'Casos reales', t: '',
+      v: () => V.pairs([['Las siamesas que compartían el corazón', 'Los médicos tuvieron que separarlas sabiendo que solo una sobreviviría. Los padres lo autorizaron. Ambas vidas valían lo mismo: padres y médicos actuaron en <b>estado de necesidad exculpante</b>, sin culpabilidad'], ['El sismo en el estacionamiento', 'Un conductor empujó con su camioneta un coche para que no le cayera un poste a la suya. Los daños eran de igual valor: hay injusto de daños, pero sin culpabilidad. <b>Sí debe pagar</b> la reparación (responsabilidad civil)'], ['Crítica a la jurisprudencia', 'Le falta decir lo más importante: que el conflicto es entre bienes <b>del mismo valor</b>']]) }
+  ],
+  sinop: { root: 'Necesidad exculpante', br: [
+    { t: 'Qué es', kids: ['Bienes del mismo valor', 'Solo se salva uno'] },
+    { t: 'Ejemplo clásico', kids: ['Tabla de Carneades'] },
+    { t: 'Casos', kids: ['Las siamesas', 'El sismo y la camioneta'] },
+    { t: 'Efecto', kids: ['Sin culpabilidad', 'Queda la responsabilidad civil'] }] },
+  trap: ['Si los bienes valen <b>lo mismo</b>, no se justifica: solo se exculpa.', 'Aunque no haya delito, puede quedar la <b>responsabilidad civil</b>.'],
+  trick: '<b>«Valen lo mismo: no te justifico, pero no te reprocho»</b>.',
+  explain: { q: '¿Qué es el estado de necesidad exculpante?', model: 'Está en la fracción V del artículo 15 y se presenta cuando hay un conflicto entre dos bienes del mismo valor y solo uno puede salvarse a costa del otro, como en la Tabla de Carneades, con dos náufragos y una tabla que solo aguanta a uno. Como los bienes valen igual, el hecho no se justifica y sigue siendo un injusto, pero no se le puede reprochar a la persona: se excluye la culpabilidad. Así se resolvió el caso de las siamesas que compartían el corazón. Aunque no haya delito, puede quedar la responsabilidad civil.', keys: ['Fr. V', 'Mismo valor', 'Tabla de Carneades', 'Sigue siendo injusto', 'Sin culpabilidad', 'Responsabilidad civil'] }
+});
+
+LESSONS.push({
+  id: 'prohibicion', icon: '📜', era: 'II.3 · Error de prohibición', title: '¡No sabía que estaba prohibido!', pages: '191–195', mins: 12,
+  goal: 'Entender el error de prohibición, sus clases y por qué no basta con decir «no sabía».',
+  steps: [
+    { h: 'Imagina que…', t: 'En 1997, un indígena de la Selva Lacandona votó dos veces en una elección federal: una con su credencial y otra con la de su hermano, que se lo había pedido. Votar dos veces era delito (art. 402), pero los delitos electorales eran nuevos y casi nadie los conocía. Para el autor, <mark>no se le podía reprochar</mark>: error de prohibición invencible.' },
+    { h: 'La fracción VIII', t: 'La fracción VIII del artículo 15 tiene dos incisos, y cada uno quita un escalón distinto:',
+      v: () => V.vs({ t: 'Inciso a)', items: ['Error sobre un elemento esencial del <b>tipo</b>', 'Quita la <b>conducta típica</b>', 'Ya lo estudiaste: error de tipo'] }, { t: 'Inciso b)', items: ['Error sobre la <b>ilicitud</b>', 'Quita la <b>culpabilidad</b>', 'Incluye el error de prohibición y el de justificación'] }) },
+    { h: '¿Qué es el error de prohibición?', t: 'La persona <b>sabe lo que hace</b> y lo quiere (hay dolo), pero <b>no sabe que está prohibido</b>: cree que actúa lícitamente. Es mejor decirle así que «error de derecho», porque ese nombre se confundía con el error de tipo. Quien toma un abrigo creyendo que es suyo tiene un error de <b>tipo</b>; sabe que robar está prohibido.',
+      v: () => V.vs({ t: 'Vencible', items: ['Con un mínimo de cuidado pudo saber que estaba prohibido', 'Se <b>reduce la pena</b> (art. 66)'] }, { t: 'Invencible', items: ['Era imposible saberlo', 'Se excluye la <b>culpabilidad</b> y el delito'] }) },
+    { h: 'No basta decir «no sabía»', t: 'Antes regía la idea de que «la ignorancia de la ley no excusa su cumplimiento». Hoy el Código Civil permite tomar en cuenta el atraso, el aislamiento o la pobreza, y el error de prohibición se reconoció en 1984 y como excluyente en 1994. Es muy importante por la <b>diversidad cultural</b> de México. Pero hay que <mark>probarlo</mark>: un tribunal negó el error a un hombre que transportaba droga escondiéndola de las autoridades, porque eso mostraba que sabía que era ilícito.' }
+  ],
+  sinop: { root: 'Error de prohibición', br: [
+    { t: 'Qué es', kids: ['Sabe lo que hace (dolo)', 'No sabe que está prohibido'] },
+    { t: 'Fr. VIII', kids: ['a): tipo', 'b): culpabilidad'] },
+    { t: 'Clases', kids: ['Vencible: baja la pena (art. 66)', 'Invencible: sin culpabilidad'] },
+    { t: 'Prueba', kids: ['No basta decirlo', 'Esconderse muestra que sabía'] }] },
+  trap: ['En el error de prohibición <b>sí hay dolo</b>: el error es sobre la ilicitud.', 'Creer que algo es tuyo es error de <b>tipo</b>, no de prohibición.', 'Esconderse de las autoridades muestra que la persona <b>sabía</b> que era ilícito.'],
+  trick: '<b>«Sé lo que hago, pero no sé que está prohibido»</b>.',
+  explain: { q: '¿Qué es el error de prohibición y qué efectos tiene?', model: 'Está en el inciso b de la fracción VIII del artículo 15. La persona sabe lo que hace y lo quiere, así que hay dolo, pero no sabe que su conducta está prohibida y cree que actúa lícitamente. Se distingue del error de tipo, que está en el inciso a, como quien toma un abrigo creyendo que es suyo. Si el error era vencible, con un mínimo de cuidado, se reduce la pena según el artículo 66; si era invencible, se excluye la culpabilidad y el delito, como en el caso del indígena que votó dos veces. Pero no basta decir que no sabía: hay que probarlo.', keys: ['Fr. VIII, inciso b', 'Hay dolo', 'No sabe que está prohibido', 'Vencible: art. 66', 'Invencible: sin culpabilidad', 'Hay que probarlo'] }
+});
+
+LESSONS.push({
+  id: 'justificacion', icon: '🔫', era: 'II.4 · Error de justificación', title: 'Creí que me estaba defendiendo', pages: '196–197', mins: 10,
+  goal: 'Entender el error de justificación y su relación con la legítima defensa putativa, y cerrar el libro.',
+  steps: [
+    { h: 'Imagina que…', t: 'Un asaltante te apunta con una pistola idéntica a una real, y tú lo golpeas con una piedra. Luego resulta que la pistola era de plástico. ¿Te defendiste legítimamente? No: la agresión no era real. Pero <mark>ni tú ni nadie podía saberlo</mark>. Eso es un error de justificación.' },
+    { h: '¿Qué es?', t: 'La persona actúa con dolo y <b>sabe</b> que su conducta está prohibida en general, pero <b>cree equivocadamente</b> que las circunstancias la justifican. Se incorporó con la reforma de 1994, al final del inciso b) de la fracción VIII: «porque crea que está justificada su conducta».',
+      v: () => V.vs({ t: 'Vencible', items: ['Podía darse cuenta', 'Se atenúan el reproche y la pena (art. 66)'] }, { t: 'Invencible', items: ['Cualquiera habría creído lo mismo', 'Se anulan la culpabilidad y el delito'] }) },
+    { h: 'La legítima defensa putativa', t: 'Es el caso más común de error de justificación. El libro cuenta un caso real: un hombre ebrio amenazó de muerte a unos policías e hizo movimientos como si fuera a sacar un arma de su coche; un policía le disparó, y luego se supo que <b>no tenía arma</b>. El policía actuó con dolo, pero creyendo que estaba justificado: según las pruebas del juicio, habría que ver si su error era <b>vencible o invencible</b>. Y ojo: <mark>no basta con decir «creí que me atacaban»</mark>; hay que probarlo.' },
+    { h: '¡Terminaste el libro!', t: 'El autor cierra diciendo que sus conclusiones se basan en el <b>sistema funcionalista social</b> que ha desarrollado, y que podrían ser distintas con otras teorías. Evitó las discusiones complicadas para dar criterios útiles para el nuevo sistema de justicia penal. <mark>Ahora tú decides si lo logró</mark>, Carmen.' }
+  ],
+  sinop: { root: 'Error de justificación', br: [
+    { t: 'Qué es', kids: ['Sabe que está prohibido', 'Cree que está justificado'] },
+    { t: 'Clases', kids: ['Vencible: atenúa (art. 66)', 'Invencible: sin culpabilidad'] },
+    { t: 'Caso típico', kids: ['Legítima defensa putativa', 'La pistola de plástico'] },
+    { t: 'Prueba', kids: ['No basta decir «creí»'] }] },
+  trap: ['En el error de <b>prohibición</b> no sabe que está prohibido; en el de <b>justificación</b> sí lo sabe, pero cree que está justificado.', 'La legítima defensa putativa se resuelve en la <b>culpabilidad</b>, no en la antijuridicidad.'],
+  trick: '<b>«Sé que está prohibido, pero creí que aquí sí se valía»</b>.',
+  explain: { q: '¿Qué es el error de justificación?', model: 'Se da cuando la persona actúa con dolo y sabe que su conducta está prohibida en general, pero cree equivocadamente que las circunstancias la justifican. Está al final del inciso b de la fracción VIII del artículo 15, desde la reforma de 1994. Si es vencible, se atenúan el reproche y la pena según el artículo 66; si es invencible, se anulan la culpabilidad y el delito. El caso más común es la legítima defensa putativa, como golpear a quien te apunta con una pistola de plástico idéntica a una real. No basta decir que uno creyó que lo atacaban: hay que probarlo.', keys: ['Sabe que está prohibido', 'Cree que está justificado', 'Fr. VIII, inciso b', 'Vencible: art. 66', 'Invencible: sin culpabilidad', 'Defensa putativa'] }
+});
+
+/* ═══════════ LECTURA GUIADA ═══════════ */
+const READING = {
+  puente: [
+    { p: '183', start: 'La culpabilidad quedará excluida por inimputabilidad o por inexigibilidad', end: 'de los cuales pasamos a ocuparnos a continuación.', look: '¿Cuáles son las dos formas en que se excluye la culpabilidad?', ans: 'Por <b>inimputabilidad</b> o por <b>inexigibilidad de otra conducta</b>.' }
+  ],
+  menores: [
+    { p: '183', start: 'Son consideradas inimputables las personas que en el momento', end: 'con el apoyo de especialistas.', look: '¿Desde qué edad hay pena? ¿Qué pasa con los menores de 12 años? ¿Qué fin tienen las medidas?', ans: 'Pena desde los <b>18</b>; los menores de <b>12</b> no tienen responsabilidad penal. Las medidas buscan <b>justicia restaurativa</b> y reintegración.' },
+    { p: '184', start: 'Tal como se puede advertir, en ambos casos estamos ante conductas típicas', end: 'sino también dichas medidas.', look: '¿El injusto de un adolescente queda impune?', ans: '<b>No</b>: se le impone una <b>medida de seguridad</b>. Por eso se habla de derecho penal y de medidas de seguridad.', tip: 'Sáltate los casos de arriba de la página: la estación te los resume.' }
+  ],
+  trastorno: [
+    { p: '185', start: 'Por otra parte, la inimputabilidad se puede derivar de un trastorno mental', end: 'como pena máxima para el injusto cometido.', look: '¿Qué se aplica en lugar de la prisión? ¿Qué límites tienen las medidas?', ans: 'Una <b>medida en un centro psiquiátrico</b>. Solo después de un injusto, no por peligrosidad, y sin superar la <b>pena máxima</b>.' },
+    { p: '185–186', start: 'Los trastornos mentales transitorios solo excluyen la imputabilidad', end: 'serán los amigos quienes deberán responder penalmente por la comisión del delito.', look: '¿Cuándo excluye la imputabilidad un trastorno transitorio?', ans: 'Cuando <b>anula por completo</b> la comprensión y fue por <b>causas ajenas</b> a la persona.' }
+  ],
+  miedo: [
+    { p: '186', start: 'El CPF dispone: “Artículo 15. El delito se excluye cuando:... IX.', end: 'ello conforme al siguiente criterio de jurisprudencia:', look: '¿Qué dice la fracción IX? ¿Qué es cada una para el autor?', ans: 'Excluye el delito cuando <b>no es racionalmente exigible</b> otra conducta. El miedo grave anula el discernimiento (<b>inimputabilidad</b>); el temor fundado es <b>inexigibilidad</b>.' },
+    { p: '187', start: 'Coincidimos en considerar que tanto el miedo grave como el temor fundado', end: 'lo establece la siguiente tesis de jurisprudencia:', look: '¿Qué hace falta para que opere el miedo grave?', ans: 'Que al cometer el injusto quede <b>anulada la capacidad de raciocinio</b>.', tip: 'Las jurisprudencias que siguen se pueden leer rápido.' }
+  ],
+  temor: [
+    { p: '188', start: 'Quedará excluida la culpabilidad si al analizar las circunstancias', end: 'tal y como se puede desprender del siguiente criterio de jurisprudencia:', look: '¿Cuándo se excluye la culpabilidad por inexigibilidad? ¿Cuáles son sus causas?', ans: 'Cuando <b>¡cualquiera habría hecho lo mismo!</b> Temor fundado, estado de necesidad exculpante, error de justificación y error de prohibición.' },
+    { p: '189–190', start: 'Lo antes dicho puede ejemplificarse en el caso del juez', end: 'lo cual constituye un delito de homicidio calificado ante el cual no prospera ninguna excluyente.', look: '¿Por qué no se le reprocha al juez? ¿Cuándo no hay excluyente para el conductor?', ans: 'Porque <b>cualquiera habría hecho lo mismo</b> ante la amenaza. No hay excluyente si el conductor <b>provocó</b> la agresión.', tip: 'Empieza en la 189 y termina arriba de la 190.' }
+  ],
+  exculpante: [
+    { p: '190–191', start: 'Como hemos visto, la fracción V del artículo 15 del CPF contempla el estado', end: 'quien deberá reparar el vehículo de María del Rocío A.', look: '¿Qué es el estado de necesidad exculpante? ¿Qué le falta a la jurisprudencia?', ans: 'Un conflicto entre bienes <b>del mismo valor</b>. A la jurisprudencia le falta decir justamente eso: que los bienes valen <b>lo mismo</b>.', tip: 'Sáltate las listas de amparos.' }
+  ],
+  prohibicion: [
+    { p: '192', start: 'La separación de la fracción VIII en dos incisos', end: 'pero que no implica que el sujeto desconociera que está prohibido robar.', look: '¿Qué quita cada inciso de la fracción VIII? ¿Qué es el error de prohibición?', ans: 'El a) quita la <b>conducta típica</b> y el b) la <b>culpabilidad</b>. En el error de prohibición la persona actúa con dolo, pero <b>no sabe que está prohibido</b>.' },
+    { p: '192–193', start: 'El error de prohibición puede ser vencible', end: 'por lo cual sostuvimos que no debía ser consignado.', look: '¿Qué efecto tiene el error vencible? ¿Y el invencible?', ans: 'El <b>vencible</b> reduce la pena; el <b>invencible</b> excluye la culpabilidad y el delito.', tip: 'Empieza abajo de la 192 y termina en la 193.' }
+  ],
+  justificacion: [
+    { p: '196', start: 'Como hemos visto, el obrar doloso del autor se sustenta', end: 'de ahí que proceda aplicar el error de justificación invencible.', look: '¿Qué es el error de justificación? ¿Qué efectos tiene?', ans: 'Saber que la conducta está prohibida, pero <b>creer que está justificada</b>. Vencible: se <b>atenúa</b> la pena (art. 66). Invencible: se anula la <b>culpabilidad</b>.' },
+    { p: '197', start: 'Las conclusiones hasta aquí alcanzadas se sustentan en el sistema funcionalista social', end: 'Será el lector quien determinará si conseguí o no mi objetivo.', look: '¿En qué sistema basa el autor sus conclusiones?', ans: 'En el <b>sistema funcionalista social</b> que ha desarrollado.', tip: '¡Es el último párrafo del libro!' }
+  ]
+};
+
+/* ═══════════ CASOS ═══════════ */
+const CASES = {
+  puente: [
+    { s: 'Se probó que alguien cometió un injusto, pero que nadie en su lugar habría podido actuar de otra forma.', q: '¿Qué escalón se cae?', a: 'La <b>culpabilidad</b>, por <b>inexigibilidad de otra conducta</b>. No hay delito.' }
+  ],
+  menores: [
+    { s: 'Un niño de 10 años rompe a propósito el vidrio de un auto.', q: '¿Qué responsabilidad penal tiene?', a: 'Ninguna: los menores de <b>12 años</b> son niños y no tienen responsabilidad penal (LFJA, art. 13).' },
+    { s: 'Una adolescente de 15 años participa en un robo.', q: '¿Se le impone una pena de prisión de adulto?', a: 'No. No es imputable, pero sí se le impone una <b>medida</b> de la LFJA, con fines de reintegración.' }
+  ],
+  trastorno: [
+    { s: 'Un juez quiere internar a una persona con esquizofrenia «por si algún día comete un delito».', q: '¿Puede hacerlo como medida penal?', a: 'No. Las medidas de seguridad <b>solo</b> se aplican después de un injusto; la simple peligrosidad no basta.' }
+  ],
+  miedo: [
+    { s: 'Un acusado dice en el juicio: «Tenía mucho miedo», pero no presenta ninguna otra prueba.', q: '¿Basta para excluir la culpabilidad?', a: 'No. Hay que <b>probarlo</b>; en el miedo grave, con peritos en psicología.' }
+  ],
+  temor: [
+    { s: 'Unos delincuentes amenazan a una cajera con matar a su familia si no les abre la caja fuerte. Ella la abre.', q: '¿Se le puede reprochar?', a: 'No. Es <b>temor fundado</b>: cualquiera habría hecho lo mismo. Se excluye la culpabilidad.' }
+  ],
+  exculpante: [
+    { s: 'En una inundación, dos personas se sostienen de una rama que solo aguanta a una. Una suelta a la otra para salvarse.', q: '¿Justificante o exculpante?', a: '<b>Exculpante</b>: las dos vidas valen lo mismo. No se justifica, pero no se le puede reprochar.' }
+  ],
+  prohibicion: [
+    { s: 'Un hombre transporta droga escondida en un tren, separado de su acompañante para no llamar la atención. Luego dice que no sabía que era ilegal.', q: '¿Hay error de prohibición?', a: 'No. Que se <b>escondiera</b> de las autoridades muestra que <b>sabía</b> que era ilícito.' },
+    { s: 'Alguien se lleva una chamarra igual a la suya creyendo que es suya.', q: '¿Error de prohibición o de tipo?', a: 'De <b>tipo</b>: se equivoca sobre la ajeneidad; sabe que robar está prohibido.' }
+  ],
+  justificacion: [
+    { s: 'De noche, alguien se acerca corriendo a Pedro con algo brillante en la mano y Pedro lo golpea. Era un vecino que le llevaba sus llaves.', q: '¿Qué hay?', a: 'Un <b>error de justificación</b> (defensa putativa). Se analiza si era vencible (baja la pena) o invencible (sin culpabilidad).' }
+  ]
+};
+
+/* ═══════════ GUIONES DE VOZ ═══════════ */
+const EXPLAIN = {
+  puente: [
+    'Carmen, ya sabes que la culpabilidad es un reproche. Pero a veces no se le puede reprochar nada a la persona: porque no podía comprender, o porque cualquiera en su lugar habría hecho lo mismo. Ese es el tema del último capítulo del libro. Quédate con esto: a veces no hay reproche.',
+    'Mira el mapa. La culpabilidad se excluye de dos formas. La primera es la inimputabilidad: por ser menor de edad, por un trastorno mental permanente o por un trastorno transitorio, como el miedo grave. La segunda es la inexigibilidad de otra conducta: el temor fundado, el estado de necesidad exculpante, el error de prohibición y el error de justificación. Quédate con esto: no podía entender, o no se le podía exigir.',
+    'Este es tu cuadro sinóptico. En el centro, las excluyentes de la culpabilidad. Primera rama: la inimputabilidad, cuando no podía comprender. Segunda rama: la inexigibilidad, cuando cualquiera habría hecho lo mismo. Tercera rama: el efecto, que se excluye el delito. Cuarta rama: pero el injusto sigue existiendo. Truco: no podía entender o no se le podía exigir.'
+  ],
+  menores: [
+    'Carmen, imagina a un joven de diecisiete años que participa en un asalto en un autobús. Lo que hizo es típico y antijurídico, es un injusto. Pero por su edad no es imputable. ¿Queda impune? No. El derecho penal responde con una medida. Quédate con esto: sin culpabilidad, pero con medida.',
+    'Hay tres edades. Los menores de doce años son niños y no tienen responsabilidad penal. De doce a dieciocho años se aplican las medidas de la Ley Federal de Justicia para Adolescentes. Y desde los dieciocho, la pena. Quédate con esto: menos de doce, nada; de doce a dieciocho, medida; desde dieciocho, pena.',
+    'Las medidas pueden ser de orientación y protección, o de internamiento. Su artículo setenta y ocho dice para qué sirven: buscan una justicia restaurativa, que el adolescente regrese a su familia y a la sociedad, y que aprenda a respetar las normas y a los demás, con apoyo de su familia y su comunidad. Quédate con esto: las medidas buscan reintegrar.',
+    'El libro cuenta casos reales de adolescentes de dieciséis y diecisiete años que cometieron injustos graves. No eran culpables por su edad, pero sí recibieron medidas. Por eso hoy se habla de derecho penal y de medidas de seguridad. Incluso en un caso muy conocido de un adolescente de catorce años ligado a un cártel, se le debía juzgar con las reglas para adolescentes. Quédate con esto: derecho penal y de medidas de seguridad.',
+    'Este es tu cuadro sinóptico. En el centro, la minoría de edad. Primera rama: los menores de doce son niños, sin responsabilidad. Segunda rama: de doce a dieciocho, medidas de la ley para adolescentes. Tercera rama: su fin es la justicia restaurativa y la reintegración. Cuarta rama: no hay culpabilidad, pero sí hay medida. Truco: menos de doce, nada; de doce a dieciocho, medida; desde dieciocho, pena.'
+  ],
+  trastorno: [
+    'Carmen, imagina que unos amigos ponen una droga muy fuerte en el refresco de un joven, sin que él lo sepa. Bajo sus efectos, maneja y causa un accidente grave. ¿Es culpable? No, porque su trastorno lo causaron otros. Los que deben responder son los amigos. Quédate con esto: si otros te lo causaron, no eres culpable.',
+    'Hay dos clases de trastorno. El permanente, como la locura, el retraso mental o la esquizofrenia: la persona no puede comprender sus actos, así que no va a prisión, sino que se le aplica una medida en un centro psiquiátrico. Y el transitorio, que solo excluye la culpabilidad si anula por completo la comprensión y fue por causas ajenas a la persona. Si ella misma lo provocó, es la acción libre en su causa. Quédate con esto: permanente o transitorio.',
+    'La fracción siete del artículo quince excluye el delito si, al hacer el hecho, la persona no podía comprender que era ilícito o no podía actuar conforme a eso, por un trastorno mental o desarrollo intelectual retardado. Salvo que ella misma lo haya provocado. Y si su capacidad solo estaba disminuida, se aplica el artículo sesenta y nueve bis. Quédate con esto: fracción siete.',
+    'Tres reglas más. El trastorno permanente se prueba con el peritaje de un psiquiatra, que explica en el juicio oral cómo llegó a su conclusión. La medida solo se aplica después de un injusto, nunca para prevenir, porque la simple peligrosidad no basta. Y la medida no puede durar más que la pena máxima del injusto. Quédate con esto: peritaje, después del injusto, y con límite.',
+    'Este es tu cuadro sinóptico. En el centro, el trastorno mental. Primera rama, el permanente: no comprende sus actos y recibe una medida en un centro psiquiátrico. Segunda rama, el transitorio: anula la comprensión y viene de causas ajenas. Tercera rama: la fracción siete, salvo que la persona lo provocó, y si está disminuida, el sesenta y nueve bis. Cuarta rama, los límites: peritaje, sin medidas preventivas y sin pasar de la pena máxima. Truco: si no puede entender, no se le reprocha, pero se le atiende.'
+  ],
+  miedo: [
+    'Carmen, imagina a dos personas que actúan con miedo. Una está tan aterrada que pierde la razón y actúa por instinto. La otra sabe perfectamente lo que hace, pero alguien la amenaza con un mal grave si no lo hace. ¿Es lo mismo? Para el autor, no. Quédate con esto: no es lo mismo perder la razón que estar amenazada.',
+    'La fracción nueve del artículo quince dice que el delito se excluye cuando, por las circunstancias, no se le podía exigir razonablemente a la persona que actuara de otra forma, porque no pudo decidirse a actuar conforme a derecho. Ahí se ubican el miedo grave y el temor fundado. Quédate con esto: fracción nueve, no era exigible otra conducta.',
+    'El miedo grave es una conmoción psíquica que anula el raciocinio, y el mal puede ser real o imaginario. Para el autor es inimputabilidad, por un trastorno transitorio. El temor fundado, en cambio, es una amenaza real, grave e inminente que viene de otra persona; también se llama vis compulsiva. Quien lo sufre sí entiende lo que hace, pero no se le puede exigir otra conducta. Los tribunales dicen: no obra el violentado, sino quien lo violenta. Quédate con esto: miedo, pierdo la razón; temor, me obligan.',
+    'Y algo importante: no basta con que el acusado diga que tenía miedo. Hay que probarlo. Para el miedo grave, que es un estado del cuerpo y la mente, se necesita la prueba de peritos en psicología. Quédate con esto: el miedo hay que probarlo.',
+    'Este es tu cuadro sinóptico. En el centro, el miedo grave y el temor fundado. Primera rama: la fracción nueve, cuando no era exigible otra conducta. Segunda rama: el miedo grave anula el raciocinio y es inimputabilidad. Tercera rama: el temor fundado es una amenaza real de otro y es inexigibilidad. Cuarta rama: no basta decirlo, se prueba con peritos. Truco: miedo, pierdo la razón; temor, me obligan.'
+  ],
+  temor: [
+    'Carmen, imagina que secuestran al hijo de un juez y amenazan con matarlo si condena a un miembro de su grupo criminal. El juez absuelve. Su conducta es típica, porque dictó a sabiendas una sentencia ilícita, y él lo entiende. Pero cualquiera habría hecho lo mismo. No se le puede exigir otra conducta. Quédate con esto: cualquiera habría hecho lo mismo.',
+    'Esa es la idea de la inexigibilidad: se excluye la culpabilidad cuando, al ver las circunstancias, concluimos que cualquiera habría hecho lo mismo. Sus causas son cuatro: el temor fundado, el estado de necesidad exculpante, el error de prohibición y el error de justificación. Quédate con esto: cuatro causas de inexigibilidad.',
+    'Otro caso. Unos manifestantes dañan los coches y amenazan con violencia a los conductores. Uno, que no provocó nada, acelera para huir y lesiona a alguien. ¿Quién diría que debió esperar a que lo bajaran y lo golpearan? Cualquiera habría hecho lo mismo, así que se excluye la culpabilidad. Pero si fue el propio conductor quien provocó la agresión, por ejemplo bajándose a encararlos y luego regresando para embestirlos, no hay ninguna excluyente: es homicidio calificado. Quédate con esto: si tú lo provocaste, no hay excluyente.',
+    'Este es tu cuadro sinóptico. En el centro, la inexigibilidad y el temor fundado. Primera rama, la regla: cualquiera habría hecho lo mismo. Segunda rama, las causas: temor fundado, necesidad exculpante y los dos errores. Tercera rama, los casos: el juez amenazado y el conductor rodeado. Cuarta rama, el límite: si él provocó, no hay excluyente. Truco: si cualquiera lo hubiera hecho, no se le reprocha.'
+  ],
+  exculpante: [
+    'Carmen, imagina a dos náufragos que se aferran a una tabla que solo aguanta a uno. Uno empuja al otro para salvarse. Es un ejemplo famoso que se llama la Tabla de Carneades. Las dos vidas valen lo mismo. No se puede justificar, pero tampoco se le puede reprochar. Quédate con esto: la Tabla de Carneades.',
+    'Los dos estados de necesidad están en la fracción cinco. Si se sacrifica un bien de menor valor, el hecho se justifica, y eso se ve en la antijuridicidad. Si los dos bienes valen lo mismo, el hecho sigue siendo un injusto, y solo se quita el reproche, en la culpabilidad. Ese es el estado de necesidad exculpante. Quédate con esto: si valen lo mismo, no se justifica, pero no se reprocha.',
+    'El libro cuenta casos reales. Unas siamesas compartían el corazón, y los médicos tuvieron que separarlas sabiendo que solo una sobreviviría; los padres lo autorizaron. Ambas vidas valían lo mismo, así que padres y médicos actuaron en estado de necesidad exculpante. Y en un sismo, un conductor empujó con su camioneta un coche para que no le cayera un poste a la suya; los daños eran del mismo valor. No hay culpabilidad, pero sí tiene que pagar la reparación. Quédate con esto: sin culpabilidad, pero con responsabilidad civil.',
+    'Este es tu cuadro sinóptico. En el centro, el estado de necesidad exculpante. Primera rama: bienes del mismo valor, y solo se salva uno. Segunda rama: el ejemplo clásico, la Tabla de Carneades. Tercera rama, los casos: las siamesas y el sismo con la camioneta. Cuarta rama, el efecto: sin culpabilidad, pero queda la responsabilidad civil. Truco: valen lo mismo, no te justifico, pero no te reprocho.'
+  ],
+  prohibicion: [
+    'Carmen, en mil novecientos noventa y siete, un indígena de la Selva Lacandona votó dos veces en una elección: una con su credencial y otra con la de su hermano, que se lo había pedido. Votar dos veces era delito, pero los delitos electorales eran nuevos y casi nadie los conocía. Para el autor, no se le podía reprochar: era un error de prohibición invencible. Quédate con esto: no sabía que estaba prohibido.',
+    'La fracción ocho del artículo quince tiene dos incisos, y cada uno quita un escalón distinto. El inciso a es el error sobre un elemento del tipo, y quita la conducta típica; ya lo estudiaste. El inciso b es el error sobre la ilicitud, y quita la culpabilidad. Ahí están el error de prohibición y el de justificación. Quédate con esto: a quita el tipo, b quita la culpabilidad.',
+    'En el error de prohibición, la persona sabe lo que hace y lo quiere, así que hay dolo, pero no sabe que está prohibido. Ojo: quien toma un abrigo creyendo que es suyo tiene un error de tipo, porque sí sabe que robar está prohibido. Si el error era vencible, porque con un poco de cuidado pudo saberlo, se reduce la pena. Si era invencible, se excluye la culpabilidad. Quédate con esto: sé lo que hago, pero no sé que está prohibido.',
+    'Antes se decía que la ignorancia de la ley no excusa su cumplimiento. Hoy se toma en cuenta el atraso, el aislamiento o la pobreza, y el error de prohibición es muy importante por la diversidad cultural de México. Pero no basta con decir no sabía: hay que probarlo. Un tribunal se lo negó a un hombre que transportaba droga escondiéndose de las autoridades, porque eso mostraba que sabía que era ilegal. Quédate con esto: si te escondes, es que sabías.',
+    'Este es tu cuadro sinóptico. En el centro, el error de prohibición. Primera rama: sabe lo que hace, pero no sabe que está prohibido. Segunda rama: la fracción ocho, donde el inciso a quita el tipo y el b la culpabilidad. Tercera rama, las clases: vencible baja la pena; invencible quita la culpabilidad. Cuarta rama, la prueba: no basta decirlo, y esconderse muestra que sabía. Truco: sé lo que hago, pero no sé que está prohibido.'
+  ],
+  justificacion: [
+    'Carmen, imagina que un asaltante te apunta con una pistola idéntica a una de verdad, y tú lo golpeas con una piedra. Después resulta que era de plástico. ¿Te defendiste legítimamente? No, porque la agresión no era real. Pero ni tú ni nadie podía saberlo. Eso es un error de justificación. Quédate con esto: creí que me estaba defendiendo.',
+    'En el error de justificación, la persona actúa con dolo y sabe que su conducta está prohibida en general, pero cree equivocadamente que las circunstancias la justifican. Se agregó en mil novecientos noventa y cuatro, al final del inciso b de la fracción ocho. Si era vencible, se atenúan el reproche y la pena. Si era invencible, porque cualquiera habría creído lo mismo, se anulan la culpabilidad y el delito. Quédate con esto: sé que está prohibido, pero creí que aquí sí se valía.',
+    'El caso más común es la legítima defensa putativa. El libro cuenta un caso real: un hombre ebrio amenazó de muerte a unos policías e hizo movimientos como si fuera a sacar un arma de su coche, y un policía le disparó. Después se supo que no tenía arma. El policía actuó con dolo, pero creyendo que estaba justificado; según las pruebas del juicio, habría que ver si su error era vencible o invencible. Y no basta con decir creí que me atacaban: hay que probarlo. Quédate con esto: la defensa putativa es un error de justificación.',
+    'Y con esto, Carmen, terminaste el libro. El autor dice que sus conclusiones se basan en el sistema funcionalista social que él ha desarrollado, y que con otras teorías podrían ser distintas. Evitó las discusiones complicadas para dar criterios útiles para el nuevo sistema de justicia penal. Y dice que el lector decidirá si lo logró. Ahora tú decides. ¡Felicidades por llegar hasta aquí! Quédate con esto: lo lograste.',
+    'Este es tu último cuadro sinóptico. En el centro, el error de justificación. Primera rama: sabe que está prohibido, pero cree que está justificado. Segunda rama, las clases: vencible atenúa, invencible quita la culpabilidad. Tercera rama, el caso típico: la legítima defensa putativa y la pistola de plástico. Cuarta rama, la prueba: no basta decir creí. Truco: sé que está prohibido, pero creí que aquí sí se valía.'
+  ]
+};
+
+const AUDIO = {
+  puente: 'Resumen corto. La culpabilidad se excluye por inimputabilidad, cuando la persona no podía comprender, o por inexigibilidad, cuando cualquiera habría hecho lo mismo. El hecho sigue siendo un injusto.',
+  menores: 'Resumen corto. Los menores de doce años son niños sin responsabilidad penal. De doce a dieciocho se aplican medidas de la ley para adolescentes, que buscan la reintegración. Desde los dieciocho, la pena.',
+  trastorno: 'Resumen corto. El trastorno mental permanente excluye la culpabilidad, y se aplica una medida en un centro psiquiátrico, solo después de un injusto y sin pasar de la pena máxima. El transitorio solo excluye si fue por causas ajenas.',
+  miedo: 'Resumen corto. El miedo grave anula el raciocinio y para el autor es inimputabilidad. El temor fundado es una amenaza real de otro: la persona entiende, pero no se le puede exigir otra conducta. Hay que probarlos.',
+  temor: 'Resumen corto. Hay inexigibilidad cuando cualquiera habría hecho lo mismo, como el juez cuyo hijo fue secuestrado o el conductor rodeado por manifestantes violentos. Pero si la persona provocó la situación, no hay excluyente.',
+  exculpante: 'Resumen corto. El estado de necesidad exculpante se da entre bienes del mismo valor, como la Tabla de Carneades o las siamesas. No se justifica, pero no se reprocha. Puede quedar la responsabilidad civil.',
+  prohibicion: 'Resumen corto. En el error de prohibición la persona sabe lo que hace, pero no sabe que está prohibido. Si es vencible, baja la pena; si es invencible, no hay culpabilidad. No basta decir no sabía: hay que probarlo.',
+  justificacion: 'Resumen corto. En el error de justificación la persona sabe que algo está prohibido, pero cree que en su caso está justificado, como en la defensa putativa. Si es vencible, baja la pena; si es invencible, no hay culpabilidad.'
+};
+
+/* ═══════════ BANCO DE PREGUNTAS ═══════════ */
+const BANK = [];
+function Q(t, q, o, a, e, p) { BANK.push({ id: 'q' + (BANK.length + 1), t, q, o, a, e, p }); }
+
+Q('puente', 'La culpabilidad se excluye por inimputabilidad o por:', ['Inexigibilidad de otra conducta', 'Atipicidad', 'Legítima defensa', 'Caso fortuito'], 0, 'Son las dos grandes formas.', '183');
+Q('puente', '¿Cuál es una causa de inimputabilidad?', ['Minoría de edad', 'Error de prohibición', 'Temor fundado', 'Estado de necesidad exculpante'], 0, 'También el trastorno mental.', '183');
+Q('puente', '¿Cuál es una causa de inexigibilidad de otra conducta?', ['Temor fundado', 'Minoría de edad', 'Trastorno mental permanente', 'Vis absoluta'], 0, 'También la necesidad exculpante y los errores.', '188');
+Q('puente', 'Si se excluye la culpabilidad, el hecho:', ['Sigue siendo un injusto', 'Se vuelve atípico', 'Se justifica', 'Desaparece'], 0, 'Típico y antijurídico.', '183');
+
+Q('menores', 'Los menores de 12 años:', ['Son niños sin responsabilidad penal', 'Reciben pena', 'Reciben internamiento siempre', 'Son adultos'], 0, 'LFJA, art. 13.', '183');
+Q('menores', 'De 12 a menos de 18 años se aplican:', ['Medidas de la LFJA', 'Penas de adulto', 'Nada', 'Multas'], 0, 'LFJA, art. 1.', '183');
+Q('menores', 'El fin de las medidas para adolescentes (art. 78 LFJA) es:', ['La justicia restaurativa y la reintegración', 'El castigo ejemplar', 'La venganza', 'La deportación'], 0, 'Con apoyo de la familia y la comunidad.', '183');
+Q('menores', 'Un adolescente que comete un injusto:', ['Queda impune', 'Recibe una medida de seguridad', 'Recibe pena de adulto', 'Es inocente'], 1, 'No es culpable, pero no queda impune.', '184');
+Q('menores', 'Por eso hoy se habla de derecho penal y de:', ['Medidas de seguridad', 'Derecho civil', 'Derecho fiscal', 'Derecho laboral'], 0, 'No solo penas.', '184');
+Q('menores', 'La minoría de edad excluye la culpabilidad por:', ['Inimputabilidad', 'Inexigibilidad', 'Atipicidad', 'Justificación'], 0, 'No tiene la edad para ser imputable.', '183');
+Q('menores', 'Las medidas de la LFJA pueden ser de orientación y protección, o de:', ['Internamiento', 'Pena de muerte', 'Trabajo forzado', 'Exilio'], 0, 'Arts. 81 a 124.', '183');
+
+Q('trastorno', 'Un trastorno mental permanente puede ser:', ['La esquizofrenia', 'Un enojo', 'El cansancio', 'La tristeza pasajera'], 0, 'También la locura o el retraso mental.', '185');
+Q('trastorno', 'A quien tiene un trastorno mental permanente se le aplica:', ['Una medida en un centro psiquiátrico', 'Prisión', 'Una multa', 'Nada'], 0, 'No podría resocializarse con la prisión.', '185');
+Q('trastorno', 'El trastorno mental permanente se prueba con:', ['El peritaje de un psiquiatra', 'Un testigo', 'La confesión', 'Una carta'], 0, 'Que expone su metodología en el juicio oral.', '185');
+Q('trastorno', 'Las medidas de seguridad se aplican:', ['Solo después de un injusto', 'Para prevenir delitos futuros', 'Por simple peligrosidad', 'A cualquiera'], 0, 'No son preventivas.', '185');
+Q('trastorno', 'La duración de la medida de seguridad no puede superar:', ['La pena máxima del injusto', 'Un día', 'La vida de la persona', 'Diez años siempre'], 0, 'Es un límite.', '185');
+Q('trastorno', 'El trastorno transitorio solo excluye la imputabilidad si:', ['Anula la comprensión y fue por causas ajenas', 'Lo provocó la persona', 'Duró poco', 'Hubo testigos'], 0, 'Como la droga puesta a escondidas.', '185');
+Q('trastorno', 'El trastorno mental como excluyente está en el artículo 15, fracción:', ['VII', 'IV', 'X', 'II'], 0, 'Del CPF.', '185');
+
+Q('miedo', 'El miedo grave y el temor fundado se ubican en el artículo 15, fracción:', ['IX', 'IV', 'II', 'X'], 0, 'Inexigibilidad de otra conducta.', '186');
+Q('miedo', 'El miedo grave:', ['Anula la capacidad de raciocinio', 'Es una amenaza de otro', 'Es un error de tipo', 'Es legítima defensa'], 0, 'Conmoción psíquica.', '187');
+Q('miedo', 'Para el autor, el miedo grave es una causa de:', ['Inimputabilidad', 'Inexigibilidad', 'Atipicidad', 'Justificación'], 0, 'Trastorno mental transitorio.', '186–187');
+Q('miedo', 'Para el autor, el temor fundado es una causa de:', ['Inimputabilidad', 'Inexigibilidad de otra conducta', 'Atipicidad', 'Justificación'], 1, 'La persona sí entiende.', '187');
+Q('miedo', 'Al temor fundado también se le llama:', ['Vis compulsiva', 'Vis absoluta', 'Vis mayor', 'Caso fortuito'], 0, 'Coacción moral.', '186');
+Q('miedo', 'En el miedo grave, el mal:', ['Puede ser real o imaginario', 'Siempre es real', 'No existe', 'Es legal'], 0, 'En el temor fundado es real.', '186');
+Q('miedo', 'El miedo grave se prueba con:', ['Peritos en psicología', 'Solo la palabra del acusado', 'Un testigo cualquiera', 'Nada'], 0, 'Es un estado psicofisiológico.', '187–188');
+
+Q('temor', 'La inexigibilidad excluye la culpabilidad cuando:', ['Cualquiera habría hecho lo mismo', 'La persona era rica', 'Había testigos', 'Era de noche'], 0, 'No se le puede exigir otra conducta.', '188');
+Q('temor', 'El juez que absuelve porque secuestraron a su hijo actúa con:', ['Temor fundado', 'Dolo eventual', 'Legítima defensa', 'Error de tipo'], 0, 'Cualquiera habría hecho lo mismo.', '189');
+Q('temor', 'El juez amenazado es:', ['Imputable', 'Inimputable', 'Menor de edad', 'Sonámbulo'], 0, 'Entiende lo que hace.', '189');
+Q('temor', 'Dictar a sabiendas una sentencia ilícita es delito según el artículo:', ['225, fr. VI', '15, fr. IX', '60', '302'], 0, 'Delitos contra la administración de justicia.', '189');
+Q('temor', 'El conductor rodeado por manifestantes violentos que acelera para huir:', ['No es culpable si no provocó la situación', 'Siempre es culpable', 'Actúa en riña', 'Comete caso fortuito'], 0, 'Cualquiera habría hecho lo mismo.', '189–190');
+Q('temor', 'Si el conductor provocó la agresión y regresó a embestir a los manifestantes:', ['No hay excluyente', 'Hay temor fundado', 'Es legítima defensa', 'Es caso fortuito'], 0, 'Es homicidio calificado.', '190');
+Q('temor', '¿Cuántas causas de inexigibilidad menciona el libro?', ['Cuatro', 'Dos', 'Diez', 'Una'], 0, 'Temor fundado, necesidad exculpante y dos errores.', '188');
+
+Q('exculpante', 'El estado de necesidad exculpante se da entre bienes:', ['Del mismo valor', 'De distinto valor', 'Colectivos', 'Sin valor'], 0, 'Si uno vale más, es justificante.', '190');
+Q('exculpante', 'La Tabla de Carneades es el ejemplo de:', ['Dos náufragos y una tabla que solo aguanta a uno', 'Un robo', 'Una riña', 'Un error de tipo'], 0, 'Ejemplo clásico de la doctrina.', '190');
+Q('exculpante', 'En el caso de las siamesas, padres y médicos:', ['Actuaron en estado de necesidad exculpante', 'Cometieron homicidio culpable', 'Actuaron en legítima defensa', 'Cometieron fraude'], 0, 'Las dos vidas valían lo mismo.', '190');
+Q('exculpante', 'En el estado de necesidad exculpante, el hecho:', ['Sigue siendo un injusto', 'Se justifica', 'Es atípico', 'Es caso fortuito'], 0, 'Solo se quita el reproche.', '191');
+Q('exculpante', 'Al conductor que empujó el coche para salvar su camioneta del poste:', ['Se le excluye la culpabilidad, pero debe reparar el daño', 'Se le castiga con prisión', 'Se le justifica', 'No debe nada'], 0, 'Subsiste la responsabilidad civil.', '191');
+Q('exculpante', 'El autor critica a la jurisprudencia porque no dice que los bienes son:', ['Del mismo valor', 'Colectivos', 'Ajenos', 'Muebles'], 0, 'No es una cuestión de Perogrullo.', '191');
+Q('exculpante', 'El estado de necesidad exculpante está en el artículo 15, fracción:', ['V', 'IV', 'IX', 'X'], 0, 'Igual que el justificante.', '190');
+
+Q('prohibicion', 'El error de prohibición está en el artículo 15, fracción VIII, inciso:', ['a)', 'b)', 'c)', 'd)'], 1, 'El a) es el error de tipo.', '191');
+Q('prohibicion', 'El inciso b) de la fracción VIII excluye:', ['La culpabilidad', 'La conducta típica', 'La antijuridicidad', 'La pena solamente'], 0, 'El a) excluye la conducta típica.', '192');
+Q('prohibicion', 'En el error de prohibición, la persona:', ['Actúa con dolo, pero no sabe que está prohibido', 'No sabe lo que hace', 'Está dormida', 'Es menor'], 0, 'Cree que actúa lícitamente.', '192');
+Q('prohibicion', 'Quien toma un abrigo creyendo que es suyo tiene un error de:', ['Tipo', 'Prohibición', 'Justificación', 'Cálculo'], 0, 'Sobre la ajeneidad.', '192');
+Q('prohibicion', 'El error de prohibición vencible:', ['Reduce la pena', 'Excluye el delito', 'Duplica la pena', 'No tiene efecto'], 0, 'Art. 66.', '192');
+Q('prohibicion', 'El error de prohibición invencible:', ['Excluye la culpabilidad y el delito', 'Solo reduce la pena', 'Aumenta la pena', 'No existe'], 0, 'No se puede exigir otra conducta.', '192');
+Q('prohibicion', 'El indígena que votó dos veces con la credencial de su hermano:', ['Actuó con error de prohibición invencible', 'Cometió fraude doloso', 'Actuó en legítima defensa', 'Tenía un trastorno mental'], 0, 'Los delitos electorales eran nuevos y desconocidos.', '193');
+
+Q('justificacion', 'En el error de justificación, la persona:', ['Sabe que está prohibido, pero cree que en su caso está justificado', 'No sabe que está prohibido', 'No sabe lo que hace', 'Está hipnotizada'], 0, 'Fr. VIII, inciso b), parte final.', '196');
+Q('justificacion', 'El error de justificación se incorporó con la reforma de:', ['1994', '1984', '2008', '1871'], 0, '10 de enero de 1994.', '196');
+Q('justificacion', 'El error de justificación vencible:', ['Atenúa el reproche y la pena', 'Excluye el delito', 'Duplica la pena', 'No tiene efecto'], 0, 'Art. 66.', '196');
+Q('justificacion', 'El caso más común de error de justificación es:', ['La legítima defensa putativa', 'La riña', 'El robo de famélico', 'La vis mayor'], 0, 'Creer que te atacan sin que sea real.', '196');
+Q('justificacion', 'Golpear al asaltante cuya pistola era de plástico idéntica a una real, para el autor, es:', ['Error de justificación invencible', 'Legítima defensa', 'Dolo eventual', 'Riña'], 0, 'Nadie podía saber que era de plástico.', '196');
+Q('justificacion', 'Para alegar defensa putativa:', ['No basta decir «creí que me atacaban»', 'Basta decirlo', 'No hace falta nada', 'Se necesita confesión'], 0, 'Se necesitan otros medios de prueba.', '197');
+Q('justificacion', 'El autor basa sus conclusiones en el sistema:', ['Funcionalista social', 'Clásico', 'Finalista', 'Romano'], 0, 'Que ha desarrollado a lo largo de los años.', '197');
+
+const EXQ = [];
+function E(t, f, q, o, a, e, p) { const it = { id: 'e' + (EXQ.length + 1), t, f, q, o, a, e, p }; EXQ.push(it); BANK.push(it); }
+E('menores', 'Caso', 'Un joven de 16 años comete un robo con violencia. ¿Qué procede?', ['Pena de adulto', 'Una medida de la ley para adolescentes', 'Nada', 'Pena de muerte'], 1, 'No es imputable, pero no queda impune.', '184');
+E('trastorno', '¿Cuál NO?', '¿Cuál NO es un límite de las medidas de seguridad?', ['Solo después de un injusto', 'No por simple peligrosidad', 'No más que la pena máxima', 'Deben durar toda la vida'], 3, 'Tienen un límite.', '185');
+E('miedo', 'Relación', '¿Qué pareja es correcta según el autor?', ['Miedo grave → inexigibilidad', 'Temor fundado → inimputabilidad', 'Miedo grave → inimputabilidad', 'Temor fundado → atipicidad'], 2, 'Temor fundado → inexigibilidad.', '187');
+E('temor', 'Completar', 'Hay inexigibilidad cuando, ante las circunstancias, ¡cualquiera habría hecho lo ______!', ['mismo', 'contrario', 'peor', 'justo'], 0, 'No se puede exigir otra conducta.', '188');
+E('exculpante', 'Caso', 'Dos alpinistas cuelgan de una cuerda que solo aguanta a uno, y uno corta la del otro. Es:', ['Estado de necesidad justificante', 'Estado de necesidad exculpante', 'Legítima defensa', 'Riña'], 1, 'Las dos vidas valen lo mismo.', '190');
+E('prohibicion', 'Relación', '¿Qué pareja es correcta?', ['Fr. VIII a) → culpabilidad', 'Fr. VIII b) → conducta típica', 'Fr. VIII a) → conducta típica', 'Fr. VIII b) → antijuridicidad'], 2, 'El b) quita la culpabilidad.', '192');
+E('prohibicion', 'Caso', 'Un hombre transporta droga escondiéndose de la policía y luego dice que no sabía que era ilegal. ¿Error de prohibición?', ['Sí, invencible', 'Sí, vencible', 'No: esconderse muestra que sabía', 'Es error de tipo'], 2, 'Así lo resolvió la jurisprudencia.', '195');
+E('justificacion', '¿Cuál NO?', '¿Cuál NO excluye la culpabilidad, sino la conducta típica?', ['Error de prohibición invencible', 'Error de justificación invencible', 'Error de tipo invencible', 'Temor fundado'], 2, 'El error de tipo excluye la conducta típica.', '192');
+
+const TF = [
+  ['Si se excluye la culpabilidad, el hecho sigue siendo un injusto.', true, 'Típico y antijurídico.', 'puente'],
+  ['Los menores de 12 años reciben medidas de internamiento.', false, 'No tienen responsabilidad penal.', 'menores'],
+  ['Un adolescente que comete un injusto recibe una medida, no una pena.', true, 'Ley Federal de Justicia para Adolescentes.', 'menores'],
+  ['Las medidas de seguridad se pueden aplicar por simple peligrosidad.', false, 'Solo después de un injusto.', 'trastorno'],
+  ['La medida no puede durar más que la pena máxima del injusto.', true, 'Es su límite.', 'trastorno'],
+  ['Para el autor, el miedo grave es inexigibilidad.', false, 'Es inimputabilidad; el temor fundado es inexigibilidad.', 'miedo'],
+  ['En el temor fundado, la amenaza es real y viene de otra persona.', true, 'Vis compulsiva.', 'miedo'],
+  ['El juez amenazado que absuelve es inimputable.', false, 'Es imputable; se excluye por inexigibilidad.', 'temor'],
+  ['Si el conductor provocó la agresión, no hay excluyente.', true, 'Así lo dice el libro.', 'temor'],
+  ['En el estado de necesidad exculpante, los bienes valen lo mismo.', true, 'Si uno vale más, es justificante.', 'exculpante'],
+  ['El estado de necesidad exculpante quita la responsabilidad civil.', false, 'La responsabilidad civil subsiste.', 'exculpante'],
+  ['En el error de prohibición hay dolo.', true, 'El error es sobre la ilicitud.', 'prohibicion'],
+  ['Basta con decir «no sabía» para que haya error de prohibición.', false, 'Hay que probarlo.', 'prohibicion'],
+  ['En el error de justificación la persona no sabe que la conducta está prohibida.', false, 'Sí lo sabe, pero cree que está justificada.', 'justificacion'],
+  ['La legítima defensa putativa es un error de justificación.', true, 'Se resuelve en la culpabilidad.', 'justificacion']
+];
+
+const FLASH = [
+  ['puente', 'Excluyentes de la culpabilidad', 'Inimputabilidad (no podía entender) e inexigibilidad (cualquiera habría hecho lo mismo).'],
+  ['menores', 'Minoría de edad', 'Menos de 12: niños. De 12 a 18: medidas (LFJA). Desde 18: pena.'],
+  ['trastorno', 'Trastorno mental (fr. VII)', 'Permanente: medida psiquiátrica. Transitorio: solo si fue por causas ajenas.'],
+  ['trastorno', 'Límites de las medidas', 'Solo tras un injusto, no por peligrosidad, y sin superar la pena máxima.'],
+  ['miedo', 'Miedo grave', 'Conmoción que anula el raciocinio (mal real o imaginario). Para el autor: inimputabilidad.'],
+  ['miedo', 'Temor fundado', 'Amenaza real, grave e inminente de otro (vis compulsiva). Inexigibilidad.'],
+  ['temor', 'Inexigibilidad', '¡Cualquiera habría hecho lo mismo! El juez amenazado; el conductor rodeado.'],
+  ['exculpante', 'Estado de necesidad exculpante', 'Bienes del mismo valor (Tabla de Carneades). Sin culpabilidad; queda la responsabilidad civil.'],
+  ['prohibicion', 'Error de prohibición', 'Sabe lo que hace, no sabe que está prohibido. Vencible: baja la pena. Invencible: sin culpabilidad.'],
+  ['prohibicion', 'Fr. VIII, incisos a) y b)', 'a) error de tipo: quita la conducta típica. b) error sobre la ilicitud: quita la culpabilidad.'],
+  ['justificacion', 'Error de justificación', 'Sabe que está prohibido, pero cree que está justificado. Ejemplo: defensa putativa.']
+];
+
+const ORDER_GAMES = [
+  { t: 'El mapa del capítulo, en orden', items: ['Minoría de edad', 'Trastorno mental', 'Miedo grave', 'Temor fundado', 'Estado de necesidad exculpante', 'Error de prohibición', 'Error de justificación'] },
+  { t: 'Las edades, de menor a mayor', items: ['Menos de 12: niño, sin responsabilidad', 'De 12 a 18: medidas para adolescentes', 'Desde 18: pena'] }
+];
+
+const MATCH_GAMES = [
+  { t: 'Caso y excluyente', pairs: [['El juez cuyo hijo fue secuestrado', 'Temor fundado'], ['Las siamesas', 'Estado de necesidad exculpante'], ['El que votó dos veces', 'Error de prohibición'], ['La pistola de plástico', 'Error de justificación'], ['La droga en el refresco', 'Trastorno transitorio']] },
+  { t: 'Excluyente y tipo', pairs: [['Minoría de edad', 'Inimputabilidad'], ['Miedo grave', 'Inimputabilidad'], ['Temor fundado', 'Inexigibilidad'], ['Error de prohibición', 'Inexigibilidad']] },
+  { t: 'Error y efecto', pairs: [['De tipo (VIII a)', 'Quita la conducta típica'], ['De prohibición vencible', 'Baja la pena'], ['De justificación invencible', 'Quita la culpabilidad']] }
+];
+
+const RIDDLES = [
+  { a: 'La Tabla de Carneades', c: ['Soy un ejemplo muy antiguo.', 'Solo aguanto a un náufrago.', 'Ilustro el estado de necesidad exculpante.'], t: 'exculpante' },
+  { a: 'El temor fundado', c: ['También me llaman vis compulsiva.', 'Soy una amenaza real de otro.', 'Quien me sufre sí entiende lo que hace.'], t: 'miedo' },
+  { a: 'El error de prohibición', c: ['Hay dolo en mí.', 'Pero no sabes que está prohibido.', 'Si soy invencible, no hay culpabilidad.'], t: 'prohibicion' },
+  { a: 'La medida de seguridad', c: ['No soy una pena.', 'Me aplican a adolescentes e inimputables.', 'No puedo durar más que la pena máxima.'], t: 'trastorno' }
+];
+
+const GLOSSARY = [
+  { k: 'inimputabilidad', t: 'Inimputabilidad', m: ['inimputabilidad', 'inimputables', 'inimputable'], d: 'Falta de capacidad para comprender el hecho o actuar conforme a esa comprensión.', ex: 'Menores de 18 o trastorno mental.', p: '183' },
+  { k: 'inexigibilidad', t: 'Inexigibilidad de otra conducta', m: ['inexigibilidad', 'inexigible'], d: 'Cuando no se le puede pedir a la persona que actuara de otra forma: cualquiera habría hecho lo mismo.', ex: 'Temor fundado.', p: '188' },
+  { k: 'injusto', t: 'Injusto', m: ['injusto'], d: 'Conducta típica y antijurídica.', ex: 'Sigue existiendo aunque no haya culpabilidad.', p: '183' },
+  { k: 'lfja', t: 'LFJA', m: ['LFJA'], d: 'Ley Federal de Justicia para Adolescentes.', ex: 'Regula las medidas para adolescentes.', p: '183' },
+  { k: 'restaurativa', t: 'Justicia restaurativa', m: ['justicia restaurativa'], d: 'Justicia que busca reparar el daño y reintegrar a la persona, no solo castigar.', ex: 'Fin de las medidas para adolescentes.', p: '183' },
+  { k: 'medida', t: 'Medida de seguridad', m: ['medidas de seguridad', 'medida de seguridad'], d: 'Respuesta penal distinta a la pena, para adolescentes o inimputables.', ex: 'Internamiento, tratamiento.', p: '184' },
+  { k: 'internamiento', t: 'Internamiento', m: ['internamiento'], d: 'Medida que consiste en mantener a la persona en un centro especializado.', ex: 'Para adolescentes, máximo 5 años.', p: '183' },
+  { k: 'esquizofrenia', t: 'Esquizofrenia', m: ['esquizofrenia'], d: 'Trastorno mental grave que altera la percepción de la realidad.', ex: 'Trastorno permanente.', p: '185' },
+  { k: 'psiquiatrico', t: 'Centro psiquiátrico', m: ['centro psiquiátrico'], d: 'Lugar donde se da tratamiento a personas con trastornos mentales.', ex: 'Medida para inimputables.', p: '185' },
+  { k: 'peligrosidad', t: 'Peligrosidad', m: ['peligrosidad'], d: 'Probabilidad de que alguien cometa delitos en el futuro. No basta para aplicar medidas.', ex: 'No hay medidas preventivas.', p: '185' },
+  { k: 'transitorio', t: 'Trastorno transitorio', m: ['transitorio', 'transitorios'], d: 'Alteración mental pasajera.', ex: 'La droga puesta a escondidas.', p: '185' },
+  { k: 'miedo', t: 'Miedo grave', m: ['miedo grave'], d: 'Conmoción psíquica que anula el raciocinio, por un mal real o imaginario.', ex: 'Para el autor: inimputabilidad.', p: '186' },
+  { k: 'temor', t: 'Temor fundado', m: ['temor fundado'], d: 'Amenaza real, grave e inminente de otra persona que obliga a actuar contra el derecho.', ex: 'El juez amenazado.', p: '186' },
+  { k: 'compulsiva', t: 'Vis compulsiva', m: ['vis compulsiva'], d: 'Latín: «fuerza que obliga». Otro nombre del temor fundado: coacción moral.', ex: 'Amenazar para obligar.', p: '186' },
+  { k: 'coaccion', t: 'Coacción moral', m: ['coacción moral', 'coacción'], d: 'Presión con amenazas para obligar a alguien a hacer algo.', ex: 'Base del temor fundado.', p: '187' },
+  { k: 'raciocinio', t: 'Raciocinio', m: ['raciocinio'], d: 'Capacidad de pensar y razonar.', ex: 'El miedo grave lo anula.', p: '187' },
+  { k: 'carneades', t: 'Tabla de Carneades', m: ['Tabla de Carneades', 'Carneades'], d: 'Ejemplo clásico: dos náufragos y una tabla que solo aguanta a uno.', ex: 'Estado de necesidad exculpante.', p: '190' },
+  { k: 'exculpante', t: 'Estado de necesidad exculpante', m: ['estado de necesidad exculpante', 'exculpante'], d: 'Salvar un bien sacrificando otro del mismo valor. Se excluye la culpabilidad.', ex: 'Las siamesas.', p: '190' },
+  { k: 'siamesas', t: 'Siamesas', m: ['siamesas'], d: 'Gemelas que nacen unidas por alguna parte del cuerpo.', ex: 'Compartían el corazón.', p: '190' },
+  { k: 'civil', t: 'Responsabilidad civil', m: ['responsabilidad civil'], d: 'Obligación de reparar o pagar un daño, aunque no haya delito.', ex: 'Reparar el coche.', p: '191' },
+  { k: 'prohibicion', t: 'Error de prohibición', m: ['error de prohibición'], d: 'Saber lo que se hace, pero no saber que está prohibido por la ley penal.', ex: 'El que votó dos veces.', p: '192' },
+  { k: 'ilicitud', t: 'Ilicitud', m: ['ilicitud'], d: 'Que algo está prohibido por la ley.', ex: 'El error de prohibición recae sobre ella.', p: '191' },
+  { k: 'vencible', t: 'Error vencible', m: ['vencible'], d: 'Error del que se habría salido con un mínimo de cuidado. Reduce la pena.', ex: 'Art. 66.', p: '192' },
+  { k: 'invencible', t: 'Error invencible', m: ['invencible'], d: 'Error del que era imposible salir. Excluye la culpabilidad.', ex: 'El indígena que votó dos veces.', p: '192' },
+  { k: 'ignorancia', t: 'La ignorancia de la ley no excusa', m: ['ignorancia de las leyes'], d: 'Antiguo principio según el cual no saber la ley no libra de cumplirla. Hoy tiene excepciones.', ex: 'Art. 21 del Código Civil.', p: '192' },
+  { k: 'consignado', t: 'Consignar', m: ['consignado', 'consignación'], d: 'Que el Ministerio Público lleve el caso ante un juez.', ex: 'El autor opinó que no debía consignarse.', p: '193' },
+  { k: 'justificacionerror', t: 'Error de justificación', m: ['error de justificación', 'error sobre la justificación'], d: 'Saber que algo está prohibido, pero creer que en ese caso está justificado.', ex: 'La defensa putativa.', p: '196' },
+  { k: 'putativa', t: 'Legítima defensa putativa', m: ['putativa'], d: 'Creer que te atacan cuando no es así.', ex: 'La pistola de plástico.', p: '196' },
+  { k: 'funcionalista', t: 'Sistema funcionalista social', m: ['funcionalista social'], d: 'La teoría del delito que desarrolla el autor del libro.', ex: 'Base de sus conclusiones.', p: '197' },
+  { k: 'cpf', t: 'CPF (Código Penal Federal)', m: ['Código Penal Federal', 'CPF'], d: 'El código que describe los delitos federales en México.', ex: 'Su art. 15 regula las excluyentes.', p: '183' }
+];
+
+const VIDEOS = [
+  { t: 'Inimputabilidad (explicación)', q: 'inimputabilidad derecho penal México explicación', s: 'trastorno' },
+  { t: 'Miedo grave y temor fundado', q: 'miedo grave y temor fundado diferencia derecho penal', s: 'miedo' },
+  { t: 'Estado de necesidad exculpante', q: 'estado de necesidad exculpante tabla de Carneades', s: 'exculpante' },
+  { t: 'Error de prohibición', q: 'error de prohibición vencible invencible explicación', s: 'prohibicion' },
+  { t: 'Legítima defensa putativa y error de justificación', q: 'legítima defensa putativa error de justificación', s: 'justificacion' }
+];
+const READINGS = [
+  { t: 'El libro completo (gratis, UNAM)', url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805', s: 'Biblioteca Jurídica Virtual del Instituto de Investigaciones Jurídicas' },
+  { t: 'Código Penal Federal (art. 15)', url: 'https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf', s: 'Cámara de Diputados · versión vigente' }
+];
+
+const COMPARE = [
+  { t: 'Los tres errores del artículo 15', head: ['Error', '¿Sobre qué?', '¿Qué quita?'], rows: [
+    ['De tipo (VIII a)', 'Una circunstancia esencial del hecho', 'La conducta típica (dolo)'],
+    ['De prohibición (VIII b)', 'Que la conducta está prohibida', 'La culpabilidad (si es invencible)'],
+    ['De justificación (VIII b)', 'Que en ese caso está justificada', 'La culpabilidad (si es invencible)']] },
+  { t: 'Miedo grave y temor fundado', head: ['Tema', 'Miedo grave', 'Temor fundado'], rows: [
+    ['¿Comprende?', 'No: anula el raciocinio', 'Sí'],
+    ['El mal', 'Real o imaginario', 'Real, de otra persona'],
+    ['Para el autor', 'Inimputabilidad', 'Inexigibilidad'],
+    ['Prueba', 'Peritos en psicología', 'Otras pruebas de la amenaza']] }
+];
+const BIG_SINOP = { root: 'Excluyentes de la culpabilidad', br: [
+  { t: 'Inimputabilidad', kids: ['Minoría de edad', 'Trastorno permanente', 'Trastorno transitorio / miedo grave'] },
+  { t: 'Inexigibilidad', kids: ['Temor fundado', 'Necesidad exculpante', 'Error de prohibición', 'Error de justificación'] }] };
+
+const MOTIVATION = [
+  'Diez minutos bien hechos valen más que una hora cansada.',
+  '¡Es el último capítulo del libro, Carmen!',
+  'Si una palabra no se entiende, tócala: para eso está.',
+  'Lo que explicas con tus palabras ya es tuyo.',
+  'Equivocarte aquí es practicar. En el examen ya lo sabrás.',
+  'Descansar también es estudiar: tu memoria trabaja mientras descansas.'
+];
+
+const TOUR = [
+  { ic: '👋', t: 'Hola, Carmen', s: 'Esta página te ayuda a estudiar el último capítulo del libro: las excluyentes de la culpabilidad. Tiene ocho estaciones cortas. Te enseño a usarla en un minuto.', mock: 'hello' },
+  { ic: '🌸', t: 'Un solo botón', s: 'Al entrar, solo toca el botón rosa grande que dice Continuar. Te lleva justo a donde te quedaste.', mock: 'continue' },
+  { ic: '🪜', t: 'Cinco pasos cortos', s: 'Cada estación dura unos diez minutos y tiene cinco pasos: leer, entender, aplicar, comprobar y explicar.', mock: 'steps' },
+  { ic: '📖', t: 'Leer con el libro', s: 'La página te dice en qué página del libro empezar, dónde terminar y qué buscar. Cuando termines, toca el botón: ya lo leí.', mock: 'read' },
+  { ic: '🔊', t: 'Explícame', s: 'Si algo no se entiende, toca Explícame y te lo explico hablando. En Más opciones puedes cambiar la velocidad de la voz.', mock: 'voice' },
+  { ic: '❓', t: 'Palabras difíciles', s: 'Las palabras difíciles tienen puntitos abajo y un signo de interrogación. Tócalas y verás qué significan.', mock: 'word' },
+  { ic: '☕', t: 'Descansa cuando quieras', s: 'A los diez minutos te aviso para que descanses. Si sales, la página guarda dónde ibas. ¡Tú puedes, Carmen!', mock: 'rest' }
+];
+
+const CW = {"H": 16, "W": 15, "words": [{"w": "INIMPUTABILIDAD", "c": "No podía comprender: primera excluyente", "r": 4, "col": 0, "d": "A"}, {"w": "JUEZ", "c": "Absolvió porque secuestraron a su hijo", "r": 3, "col": 5, "d": "D"}, {"w": "INEXIGIBILIDAD", "c": "Cualquiera habría hecho lo mismo", "r": 0, "col": 0, "d": "D"}, {"w": "PROHIBICION", "c": "Error de ___: no sabe que está prohibido", "r": 0, "col": 2, "d": "D"}, {"w": "PLASTICO", "c": "Material de la pistola del asaltante", "r": 2, "col": 7, "d": "D"}, {"w": "MIEDO", "c": "___ grave: anula el raciocinio", "r": 3, "col": 9, "d": "D"}, {"w": "CARNEADES", "c": "Tabla de ___: dos náufragos y una tabla", "r": 3, "col": 13, "d": "D"}, {"w": "VOTO", "c": "El indígena lo emitió dos veces", "r": 9, "col": 6, "d": "A"}, {"w": "TEMOR", "c": "___ fundado: amenaza real de otro", "r": 9, "col": 8, "d": "D"}, {"w": "PUTATIVA", "c": "Defensa en la que crees que te atacan", "r": 0, "col": 2, "d": "A"}, {"w": "TRASTORNO", "c": "Mental, permanente o transitorio", "r": 12, "col": 3, "d": "A"}, {"w": "SIAMESAS", "c": "Compartían el corazón", "r": 3, "col": 11, "d": "D"}, {"w": "PERITO", "c": "Prueba el miedo grave o el trastorno", "r": 10, "col": 4, "d": "D"}, {"w": "ADOLESCENTE", "c": "Persona de 12 a 18 años: recibe medidas", "r": 15, "col": 2, "d": "A"}]};
+
+/* ═══════════ EXÁMENES (armados con el banco) ═══════════ */
+const QB = {}; BANK.forEach(q => { QB[q.id] = q; });
+const byT = t => BANK.filter(q => q.t === t && q.id[0] === 'q');
+const EXAMS = (() => {
+  const st = LESSONS.filter(l => !l.bridge).map(l => l.id);
+  const pick = idxs => st.flatMap(t => idxs.map(i => byT(t)[i])).filter(Boolean).map(q => q.id);
+  const a = pick(CHAP.exA), b = pick(CHAP.exB);
+  const c = EXQ.map(q => q.id).concat(st.map(t => (byT(t)[6] || byT(t)[5] || byT(t)[0]).id)).slice(0, 18);
+  return [
+    { id: 'ex1', t: 'Examen 1', s: `Todo el capítulo · ${a.length} preguntas`, qs: a },
+    { id: 'ex2', t: 'Examen 2', s: `Todo el capítulo · ${b.length} preguntas`, qs: b },
+    { id: 'ex3', t: 'Examen 3 · Estilo examen', s: `Casos, completar y «¿cuál NO?» · ${c.length} preguntas`, qs: c }
+  ];
+})();
+
+/* ═══════════ PLATAFORMA · LÓGICA (modo enfocado, ajustada a Carmen) ═══════════ */
+(function () {
+  'use strict';
+  const KEY = CHAP.key;
+  const STEP_NAMES = ['Leer', 'Entender', 'Aplicar', 'Comprobar', 'Explicar'];
+  const STEP_IC = ['📖', '💡', '🧩', '✅', '🗣️'];
+  const PAUSE_MS = 10 * 60 * 1000;
+  const MAXHOT = 4;
+  const LET = 'ABCD';
+  const NAME = STUDENT.name;
+  const L = id => LESSONS.find(l => l.id === id);
+  const idx = id => LESSONS.findIndex(l => l.id === id);
+  const coreQs = id => byT(id).slice(0, 3);
+  const app = document.getElementById('app');
+
+  /* ── Estado guardado ── */
+  function defaults() { return { v: 1, at: LESSONS[0].id, pos: {}, done: {}, sp: {}, reveal: {}, lq: {}, ans: {}, wrong: [], rate: 0.95, auto: false, tour: false, days: [], notes: {}, keys: {}, exams: {}, cw: {} }; }
+  function load() {
+    try { const raw = localStorage.getItem(KEY); if (raw) { const d = JSON.parse(raw); const b = defaults(); Object.keys(b).forEach(k => { if (d[k] === undefined) d[k] = b[k]; }); return d; } } catch (e) { /* sin almacenamiento */ }
+    return defaults();
+  }
+  let S = load();
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* ignorar */ } }
+  const dkey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const today = () => dkey(new Date());
+  const daysBetween = (a, b) => Math.round((new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 864e5);
+  function markDay() { const t = today(); if (!S.days.includes(t)) { S.days.push(t); S.days = S.days.slice(-90); save(); } }
+  function streak() { let n = 0; const d = new Date(); while (S.days.includes(dkey(d))) { n++; d.setDate(d.getDate() - 1); } return n; }
+  const pos = id => S.pos[id] || { step: 0, sub: 0 };
+
+  /* ── Pantallas de una estación ── */
+  function count(id, step) { const l = L(id); return [READING[id].length, l.steps.length + 1, CASES[id].length, coreQs(id).length, 1][step]; }
+  function totalScreens(id) { let n = 0; for (let s = 0; s < 5; s++) n += count(id, s); return n; }
+  function screenIndex(id, step, sub) { let n = 0; for (let s = 0; s < step; s++) n += count(id, s); return n + sub; }
+
+  /* ── Estado de pantalla ── */
+  const UI = { view: 'home', st: null, sheet: null, modal: null, game: null, ex: null, tour: null, fin: null, t0: 0, autoKey: '', q: '', rv: {}, cwWord: null, cwCheck: false };
+
+  /* ── Voz que explica ── */
+  function n2w(n) {
+    n = +n;
+    const u = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+    const t = ['', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+    const h = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
+    if (n < 30) return u[n];
+    if (n < 100) return t[Math.floor(n / 10)] + (n % 10 ? ' y ' + u[n % 10] : '');
+    if (n === 100) return 'cien';
+    if (n < 1000) return h[Math.floor(n / 100)] + (n % 100 ? ' ' + n2w(n % 100) : '');
+    if (n < 1e6) { const k = Math.floor(n / 1000), r = n % 1000; return (k === 1 ? 'mil' : n2w(k) + ' mil') + (r ? ' ' + n2w(r) : ''); }
+    return String(n);
+  }
+  function say(html) {
+    let s = String(html).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ');
+    s = s.replace(/\bCPF\b/g, 'Código Penal Federal').replace(/\bDOF\b/g, 'Diario Oficial de la Federación').replace(/\bCNPP\b/g, 'Código Nacional de Procedimientos Penales')
+      .replace(/\bart\.\s*/gi, 'artículo ').replace(/\bpágs\.\s*/gi, 'páginas ').replace(/\bpág\.\s*/gi, 'página ');
+    s = s.replace(/[«»"“”]/g, '').replace(/≠/g, ' no es lo mismo que ').replace(/→/g, ', luego, ').replace(/\s=\s/g, ' es ').replace(/·/g, ', ').replace(/…/g, '. ');
+    s = s.replace(/(\d)\s*[–-]\s*(\d)/g, '$1 a $2').replace(/(\d{1,3}),(\d{3})/g, '$1$2').replace(/\d+/g, m => n2w(m));
+    return s.replace(/\s+/g, ' ').trim();
+  }
+  const synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+  let voice = null, speakingId = null, tok = 0;
+  function pickVoice() { if (!synth) return; const vs = synth.getVoices(); voice = vs.find(v => /es[-_]MX/i.test(v.lang)) || vs.find(v => /es[-_](US|419)/i.test(v.lang)) || vs.find(v => /^es/i.test(v.lang)) || null; }
+  if (synth) { pickVoice(); try { synth.addEventListener('voiceschanged', pickVoice); } catch (e) { synth.onvoiceschanged = pickVoice; } }
+  function speak(text, id, onend) {
+    if (!synth) { toast('Tu navegador no tiene voz. Prueba abrir la página en Chrome.'); if (onend) setTimeout(onend, 5000); return; }
+    const my = ++tok; synth.cancel();
+    const parts = say(text).split(/([.!?])\s+/).reduce((acc, p, i, arr) => { if (i % 2 === 0) acc.push(p + (arr[i + 1] || '')); return acc; }, []).filter(x => x.trim());
+    speakingId = id || 'x'; syncVoice();
+    parts.forEach((p, i) => {
+      const u = new SpeechSynthesisUtterance(p); u.lang = 'es-MX'; if (voice) u.voice = voice; u.rate = S.rate;
+      if (i === parts.length - 1) u.onend = () => { if (my !== tok) return; speakingId = null; syncVoice(); if (onend) onend(); };
+      u.onerror = () => { if (my !== tok) return; speakingId = null; syncVoice(); };
+      synth.speak(u);
+    });
+  }
+  function stop() { tok++; if (synth) synth.cancel(); speakingId = null; syncVoice(); }
+  let SAY = {};
+  function sayBtn(id, text, label, cls) {
+    label = label || 'Explícame'; SAY[id] = text; const on = speakingId === id;
+    return `<button class="say ${cls || ''} ${on ? 'on' : ''}" data-a="say" data-id="${id}" data-l="${label}"><span class="ic" aria-hidden="true">${on ? '⏹' : '🔊'}</span><span class="lbl">${on ? 'Detener' : label}</span></button>`;
+  }
+  function syncVoice() {
+    document.querySelectorAll('[data-a="say"]').forEach(b => {
+      const on = speakingId === b.dataset.id; b.classList.toggle('on', on);
+      b.querySelector('.lbl').textContent = on ? 'Detener' : b.dataset.l; b.querySelector('.ic').textContent = on ? '⏹' : '🔊';
+    });
+  }
+
+  /* ── Palabras difíciles subrayadas ── */
+  const GL = {}; const ALTS = [];
+  GLOSSARY.forEach(g => { GL[g.k] = g; g.m.forEach(m => ALTS.push([m, g.k])); });
+  ALTS.sort((a, b) => b[0].length - a[0].length);
+  const altKey = {}; ALTS.forEach(([m, k]) => { altKey[m.toLowerCase()] = k; });
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  let GL_RE = null;
+  try { GL_RE = new RegExp('(^|[^\\p{L}])(' + ALTS.map(a => esc(a[0])).join('|') + ')(?![\\p{L}])', 'giu'); } catch (e) { GL_RE = null; }
+  function hot(html, used) {
+    if (!html) return '';
+    if (!GL_RE) return html;
+    let skip = 0;
+    return String(html).split(/(<[^>]+>)/).map(p => {
+      if (p.charAt(0) === '<') { if (/^<(button|a)\b/i.test(p)) skip++; else if (/^<\/(button|a)>/i.test(p)) skip = Math.max(0, skip - 1); return p; }
+      if (skip || used.size >= MAXHOT) return p;
+      return p.replace(GL_RE, (all, pre, w) => {
+        const k = altKey[w.toLowerCase()];
+        if (!k || used.has(k) || used.size >= MAXHOT) return all;
+        used.add(k);
+        return pre + `<button class="hw" data-a="gl" data-k="${k}">${w}<span class="hw-q" aria-hidden="true">?</span></button>`;
+      });
+    }).join('');
+  }
+
+  /* ── Utilidades ── */
+  function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function toast(msg) { const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2800); }
+  const top = () => window.scrollTo(0, 0);
+  let askKey = null, askT = 0;
+  function ask(key, msg) { if (askKey === key && Date.now() - askT < 5000) { askKey = null; return true; } askKey = key; askT = Date.now(); toast(msg); return false; }
+  function rec(q, ok, fromErrors) {
+    S.ans[q.id] = ok;
+    if (!ok && !S.wrong.includes(q.id)) S.wrong.push(q.id);
+    if (ok && fromErrors) S.wrong = S.wrong.filter(x => x !== q.id);
+    save();
+  }
+  function dueReview() {
+    const lv = [1, 3, 7];
+    for (const l of LESSONS) {
+      const d = S.done[l.id]; if (!d) continue;
+      const done = (S.sp[l.id] || []).length; if (done >= lv.length) continue;
+      if (daysBetween(d, today()) >= lv[done]) return l.id;
+    }
+    return null;
+  }
+  function nextStation() { if (S.at && !S.done[S.at]) return S.at; const n = LESSONS.find(l => !S.done[l.id]); return n ? n.id : null; }
+
+  /* ── Preguntas ── */
+  const qScript = (q, n) => `${n ? 'Pregunta ' + n + '. ' : ''}${q.q.replace(/_{3,}/g, ' espacio en blanco ')} ${q.o.map((o, i) => 'Opción ' + LET[i] + ': ' + o + '.').join(' ')}`;
+  const fbScript = (q, ch) => (ch === q.a ? `¡Muy bien, ${NAME}! ` : `Casi, ${NAME}. No pasa nada, así se aprende. La respuesta correcta es la ${LET[q.a]}: ${q.o[q.a]}. `) + q.e + ` Lo encuentras en la página ${q.p} del libro.`;
+  function vOpts(q, ch, act) {
+    return `<div class="opts">${q.o.map((o, i) => { let c = ''; if (ch != null) { if (i === q.a) c = 'ok'; else if (i === ch) c = 'no'; }
+      return `<button class="opt ${c}" data-a="${act}" data-i="${i}" ${ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${o}</span></button>`; }).join('')}</div>`;
+  }
+  function vFb(q, ch, id) {
+    const ok = ch === q.a;
+    return `<div class="fb ${ok ? 'ok' : 'no'}" role="status"><b class="h">${ok ? '¡Muy bien!' : 'Casi. Vamos a verlo.'}</b><p>${ok ? '' : `La correcta es la <b>${LET[q.a]}</b>: ${q.o[q.a]}. `}${q.e}</p><span class="pg">Libro, pág. ${q.p}</span>${sayBtn(id, fbScript(q, ch), 'Explícame por qué')}</div>`;
+  }
+
+  /* ═════════ VISTAS ═════════ */
+  const ICONS = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>',
+    study: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg>',
+    review: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9"/><path d="M3 4v5h5"/></svg>',
+    words: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>'
+  };
+  function vTabs() {
+    const g = { home: 'home', more: 'home', exams: 'home', exam: 'home', hoja: 'home', videos: 'home', avance: 'home', study: 'study', next: 'study', review: 'review', game: 'review', words: 'words' }[UI.view] || 'home';
+    const tab = (v, t) => `<button class="tab ${g === v ? 'on' : ''}" data-a="go" data-v="${v}" ${g === v ? 'aria-current="page"' : ''}>${ICONS[v]}<span>${t}</span></button>`;
+    return `<nav class="tabbar" aria-label="Secciones"><div class="tabbar-in">${tab('home', 'Inicio')}${tab('study', 'Estudiar')}${tab('review', 'Repasar')}${tab('words', 'Palabras')}</div></nav>`;
+  }
+  const backTo = (v, t) => `<button class="back" data-a="go" data-v="${v}">← ${t}</button>`;
+
+  /* Inicio */
+  function vHome() {
+    const h = new Date().getHours();
+    const g = h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const nx = nextStation(); let cont;
+    if (nx) {
+      const l = L(nx), p = pos(nx), started = p.step > 0 || p.sub > 0;
+      cont = `<button class="btn big wide" data-a="cont"><span class="big-t">${started ? 'Continuar' : (nDone ? 'Continuar' : 'Empezar')} →</span><span class="big-s">${l.icon} ${l.title}<br>Paso ${p.step + 1} de 5: ${STEP_NAMES[p.step]}</span></button>`;
+    } else cont = `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span><span class="big-s">Terminaste las ${LESSONS.length} estaciones 🎉</span></button>`;
+    const due = dueReview();
+    const m = MOTIVATION[(new Date().getDate()) % MOTIVATION.length];
+    return `<main class="app home">
+      <section class="hero"><div class="eyebrow on-acc">Expediente · Capítulo ${CHAP.n} · ${CHAP.short}</div><h1>${g}, ${NAME}</h1>
+        <div class="hero-meter"><span>${nDone} de ${LESSONS.length} estaciones</span><div class="bar"><i style="width:${Math.round(nDone / LESSONS.length * 100)}%"></i></div></div></section>
+      ${cont}
+      ${due ? `<button class="btn ghost wide tall" data-a="spaced" data-id="${due}">🔁 Repaso de hoy · 5 preguntas<br><small>${L(due).title}</small></button>` : ''}
+      <button class="btn line wide" data-a="tour">▶ Ver cómo se usa la página (1 minuto)</button>
+      <details class="more"><summary>Más opciones</summary><div class="stack tight-6">
+        <button class="mission-l" data-a="go" data-v="exams"><span>📝</span><span class="t">Exámenes de práctica</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="hoja"><span>🗂️</span><span class="t">Hoja de repaso (tapa y destapa)</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="videos"><span>🎬</span><span class="t">Videos y lecturas</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="avance"><span>📈</span><span class="t">Mi avance y la voz</span><span>›</span></button>
+      </div></details>
+      <p class="motiv-s center">${m}</p>
+    </main>`;
+  }
+
+  /* Estudiar */
+  function vStudy() {
+    return `<main class="app"><h1>Estudiar</h1><p class="muted">Capítulo ${CHAP.n} · ${CHAP.short} · págs. ${CHAP.pages}. Ve en orden, una estación a la vez.</p>
+    <div class="route">${LESSONS.map((l, i) => {
+      const p = pos(l.id), d = S.done[l.id];
+      const stt = d ? 'Terminada ✓' : (p.step || p.sub) ? `Vas en el paso ${p.step + 1}: ${STEP_NAMES[p.step]}` : 'Sin empezar';
+      return `<button class="lrow ${d ? 'done' : ''}" data-a="open" data-id="${l.id}"><span class="n">${d ? '✓' : i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">págs. ${l.pages} · unos ${l.mins} min · ${stt}</span></span><span class="ic">›</span></button>`;
+    }).join('')}</div></main>`;
+  }
+
+  /* Estación en modo enfocado */
+  function vLesson() {
+    const id = UI.st, l = L(id), p = pos(id), st = p.step, sub = p.sub;
+    const tot = totalScreens(id), si = screenIndex(id, st, sub), n = count(id, st);
+    const used = new Set(); const rk = `${id}:${st}:${sub}`; const rev = !!S.reveal[rk];
+    const last = sub === n - 1;
+    const nextLbl = last && st < 4 ? `Siguiente: ${STEP_NAMES[st + 1]} →` : 'Siguiente →';
+    const nextB = `<button class="btn big-n" data-a="next">${nextLbl}</button>`;
+    let body = '', primary = nextB, main = '';
+    if (st === 0) {
+      const f = READING[id][sub];
+      main = `Abre tu libro en la página ${f.p}. Empieza donde dice: ${f.start}. Lee hasta donde dice: ${f.end}. Mientras lees, busca esto: ${f.look} ${f.tip ? f.tip + ' ' : ''}Sáltate las notas al pie, que son los textos chiquitos con numeritos abajo de la página. Cuando termines, toca el botón: ya lo leí.`;
+      body = `<section class="sheet frag ${rev ? 'fdone' : ''}"><div class="eyebrow">Pedacito ${sub + 1} de ${n} · Libro, pág. ${f.p}</div><h2>Lee en tu libro</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}
+        <div class="fr-where"><div><span class="lab">Empieza en</span>«${f.start}…»</div><div><span class="lab">Termina en</span>«…${f.end}»</div></div>
+        <p class="fr-look"><b>Busca:</b> ${hot(f.look, used)}</p>${f.tip ? `<p class="ojo small">💡 ${f.tip}</p>` : ''}
+        ${rev ? `<div class="model"><b>Lo que tenías que encontrar</b><p>${hot(f.ans, used)}</p>${sayBtn('a-' + rk, 'Lo que tenías que encontrar es: ' + f.ans, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ya lo leí ✓</button>`;
+    } else if (st === 1) {
+      if (sub < l.steps.length) {
+        const s = l.steps[sub]; main = EXPLAIN[id][sub];
+        body = `<section class="sheet"><div class="eyebrow">Explicación ${sub + 1} de ${n}</div><h2>${s.h}</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}${s.t ? `<p class="body">${hot(s.t, used)}</p>` : ''}${s.v ? s.v() : ''}</section>`;
+      } else {
+        main = EXPLAIN[id][l.steps.length];
+        body = `<section class="sheet"><div class="eyebrow">Resumen · ${n} de ${n}</div><h2>Tu cuadro sinóptico</h2>${sayBtn('m-' + rk, main, 'Explícame el cuadro', 'wide')}
+          ${V.sinop(l.sinop.root, l.sinop.br)}
+          <details class="callout trap"><summary>⚠️ Cuidado en el examen y truco</summary><ul>${l.trap.map(x => `<li>${x}</li>`).join('')}</ul><p class="trick">🧠 <b>Truco:</b> ${l.trick}</p></details></section>`;
+      }
+    } else if (st === 2) {
+      const c = CASES[id][sub];
+      main = `Caso de la vida real. ${c.s} La pregunta es: ${c.q} Piénsalo un momento y después toca: ver respuesta.`;
+      body = `<section class="sheet"><div class="eyebrow">Caso ${sub + 1} de ${n}</div><h2>¿Qué harías?</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="case-s">${hot(c.s, used)}</p><p class="q-text">${hot(c.q, used)}</p>
+        ${rev ? `<div class="model"><b>Respuesta</b><p>${hot(c.a, used)}</p>${sayBtn('a-' + rk, 'La respuesta es: ' + c.a, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ver respuesta</button>`;
+    } else if (st === 3) {
+      const q = coreQs(id)[sub]; const ch = S.lq[id + ':' + sub];
+      main = qScript(q, sub + 1);
+      body = `<section class="sheet q"><div class="eyebrow">Pregunta ${sub + 1} de ${n}</div>${sayBtn('m-' + rk, main, 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, ch, 'lopt')}${ch != null ? vFb(q, ch, 'f-' + rk) : ''}</section>`;
+      if (ch == null) primary = `<button class="btn big-n" disabled>Elige una respuesta</button>`;
+    } else {
+      const ex = l.explain; const keys = S.keys[id] || [];
+      main = `Ahora te toca a ti, ${NAME}. ${ex.q} Escríbelo con tus palabras, aunque sea poquito. No tiene que quedar perfecto. Cuando termines, toca: ver respuesta modelo.`;
+      body = `<section class="sheet"><div class="eyebrow">Último paso</div><h2>Dilo con tus palabras</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="q-text">${ex.q}</p>
+        <label class="sr" for="note">Tu respuesta</label><textarea id="note" class="ta" data-in="note" placeholder="Escribe aquí, aunque sea poquito…">${(S.notes[id] || '').replace(/</g, '&lt;')}</textarea>
+        ${rev ? `<div class="model"><b>Respuesta modelo</b><p>${ex.model}</p>${sayBtn('a-' + rk, 'Una respuesta modelo sería: ' + ex.model + ' Ahora marca las ideas que sí pusiste.', 'Escuchar')}</div>
+        <div class="stack tight"><b>Marca las ideas que sí pusiste:</b>${ex.keys.map((k, i) => `<label class="check"><input type="checkbox" data-a="key" data-i="${i}" ${keys.includes(i) ? 'checked' : ''}><span>${k}</span></label>`).join('')}</div>` : ''}</section>`;
+      primary = rev ? `<button class="btn big-n" data-a="finish">Terminar estación ✓</button>` : `<button class="btn big-n" data-a="reveal">Ver respuesta modelo</button>`;
+    }
+    UI.mainSay = 'm-' + rk; UI.mainKey = rk;
+    return `<div class="focus">
+      <header class="ftop"><button class="xbtn" data-a="exit">✕ Salir</button><div class="fstep"><b>Paso ${st + 1} de 5 · ${STEP_IC[st]} ${STEP_NAMES[st]}</b><span>${l.icon} ${l.title}</span></div></header>
+      <div class="bar thin" role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${si + 1}" aria-label="Avance de la estación"><i style="width:${Math.round((si + 1) / tot * 100)}%"></i></div>
+      <main class="app focus-main">${body}</main>
+      <footer class="fbot"><button class="back-l" data-a="prev" ${si === 0 ? 'disabled' : ''}>← Atrás</button>${primary}</footer></div>`;
+  }
+
+  /* ¿Qué sigue? */
+  function vNext() {
+    const l = L(UI.fin); const i = idx(UI.fin);
+    const nx = LESSONS.slice(i + 1).find(x => !S.done[x.id]) || LESSONS.find(x => !S.done[x.id]);
+    const nl = nx || null;
+    const text = `¡Terminaste la estación ${l.title}, ${NAME}! Mañana te toca un repaso de cinco preguntas de esta estación; te va a aparecer en Inicio. ${nl ? 'Lo que sigue es: ' + nl.title + '. Si ya estás cansada, descansa: la página guarda tu avance.' : 'Ya terminaste todas las estaciones del capítulo ${CHAP.word}. Ahora puedes hacer un examen de práctica.'}`;
+    return `<main class="app">
+      <section class="card center done-card"><div class="big-emoji" aria-hidden="true">🎉</div><h1>¡Terminaste!</h1><p>${l.icon} <b>${l.title}</b></p></section>
+      <section class="card"><h2>¿Qué sigue?</h2>${sayBtn('next-say', text, 'Escuchar', 'wide')}<div class="plan">
+        <div class="plan-r"><span aria-hidden="true">🔁</span><div><b>Mañana</b><small>Un repaso de 5 preguntas de esta estación. Te aparecerá en Inicio.</small></div></div>
+        ${nl ? `<div class="plan-r"><span aria-hidden="true">${nl.icon}</span><div><b>La siguiente parte</b><small>${nl.title} · págs. ${nl.pages} · unos ${nl.mins} min</small></div></div>` : `<div class="plan-r"><span aria-hidden="true">📝</span><div><b>Ya puedes hacer el examen</b><small>Terminaste todas las estaciones del capítulo ${CHAP.n}.</small></div></div>`}
+      </div></section>
+      ${nl ? `<button class="btn big wide" data-a="open" data-id="${nl.id}"><span class="big-t">Seguir con la siguiente →</span><span class="big-s">${nl.icon} ${nl.title}</span></button>` : `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span></button>`}
+      <button class="btn line wide" data-a="go" data-v="home">☕ Descansar por hoy</button>
+    </main>`;
+  }
+
+  /* Repasar */
+  const GAMES = [
+    { g: 'sinops', ic: '🗂️', t: 'Ver esquemas', s: 'Tus cuadros sinópticos, con voz' },
+    { g: 'audio', ic: '🎧', t: 'Escuchar resúmenes', s: 'Audios cortos de medio minuto' },
+    { g: 'quiz', ic: '✅', t: 'Preguntas', s: 'Por estación o mezcladas' },
+    { g: 'errors', ic: '🩹', t: 'Mis errores', s: '' },
+    { g: 'flash', ic: '🃏', t: 'Tarjetas', s: 'Voltea y recuerda' },
+    { g: 'tf', ic: '⚖️', t: '¿Verdadero o falso?', s: 'Rápido y fácil' },
+    { g: 'order', ic: '🔢', t: 'Ordenar', s: 'Pon las cosas en orden' },
+    { g: 'match', ic: '🔗', t: 'Relacionar', s: 'Une cada pareja' },
+    { g: 'riddle', ic: '🕵️', t: 'Adivina quién soy', s: 'Con pistas' },
+    { g: 'cw', ic: '✏️', t: 'Crucigrama', s: '15 palabras del capítulo' }
+  ];
+  function vReview() {
+    return `<main class="app"><h1>Repasar</h1><p class="muted">Elige una forma de repasar. Las dos primeras son con esquemas y audio, como te gusta.</p>
+    <div class="tiles">${GAMES.map(x => `<button class="tile ${x.g === 'sinops' || x.g === 'audio' ? 'fav' : ''}" data-a="game" data-g="${x.g}"><span class="ti" aria-hidden="true">${x.ic}</span><b>${x.t}</b><span>${x.g === 'errors' ? (S.wrong.length ? S.wrong.length + ' por repasar' : 'Aún no tienes') : x.s}</span></button>`).join('')}</div></main>`;
+  }
+  function startGame(g, extra) {
+    stop();
+    const G = { g };
+    if (g === 'quiz') G.pick = true;
+    if (g === 'errors') { if (!S.wrong.length) { toast('¡No tienes errores guardados!'); return; } Object.assign(G, { g: 'quiz', list: shuffle(S.wrong).slice(0, 10), i: 0, ch: null, ok: 0, errors: true, title: 'Mis errores' }); }
+    if (g === 'flash') Object.assign(G, { list: FLASH.map((_, i) => i), i: 0, flip: false });
+    if (g === 'tf') Object.assign(G, { list: shuffle(TF.map((_, i) => i)), i: 0, pick: null, ok: 0 });
+    if (g === 'order') G.gi = null;
+    if (g === 'match') G.gi = null;
+    if (g === 'riddle') Object.assign(G, { i: 0, n: 1, show: false });
+    if (g === 'vocab') { const list = shuffle(GLOSSARY.map(x => x.k)).slice(0, 8); Object.assign(G, { list, i: 0, ch: null, ok: 0, opts: list.map(k => shuffle([k].concat(shuffle(GLOSSARY.map(x => x.k).filter(x => x !== k)).slice(0, 3)))) }); }
+    if (extra) Object.assign(G, extra);
+    UI.game = G; UI.view = 'game'; render(); top();
+  }
+  function startQuiz(list, title, extra) { UI.game = Object.assign({ g: 'quiz', list, i: 0, ch: null, ok: 0, title }, extra || {}); UI.view = 'game'; render(); top(); }
+
+  function vGame() {
+    const G = UI.game; const back = backTo('review', 'Repasar');
+    if (G.g === 'sinops') {
+      return `<main class="app">${back}<h1>Esquemas</h1><p class="muted">Toca «Explícame el cuadro» y escucha rama por rama.</p>
+        <section class="card"><h2>Todo el capítulo</h2>${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+        ${LESSONS.map(l => `<section class="card"><div class="eyebrow">${l.icon} págs. ${l.pages}</div><h2>${l.title}</h2>${sayBtn('sn-' + l.id, EXPLAIN[l.id][l.steps.length], 'Explícame el cuadro', 'wide')}${V.sinop(l.sinop.root, l.sinop.br)}</section>`).join('')}</main>`;
+    }
+    if (G.g === 'audio') {
+      return `<main class="app">${back}<h1>Escuchar resúmenes</h1><p class="muted">Cada audio dura más o menos medio minuto. Puedes escucharlos mientras haces otra cosa.</p>
+        ${LESSONS.map(l => `<section class="card audio-row"><div><b>${l.icon} ${l.title}</b><div class="small muted">págs. ${l.pages}</div></div>${sayBtn('au-' + l.id, AUDIO[l.id], 'Escuchar')}</section>`).join('')}
+        <section class="card audio-row"><div><b>🎧 Todo seguido</b><div class="small muted">Unos 3 minutos</div></div>${sayBtn('au-all', LESSONS.map(l => AUDIO[l.id]).join(' '), 'Escuchar todo')}</section></main>`;
+    }
+    if (G.g === 'quiz' && G.pick) {
+      return `<main class="app">${back}<h1>Preguntas</h1><p class="muted">¿De qué parte quieres preguntas?</p><div class="route">
+        <button class="lrow" data-a="quizAll"><span class="n">★</span><span><span class="tt">Mezcladas</span><span class="meta">10 preguntas de todo el capítulo</span></span><span class="ic">›</span></button>
+        ${LESSONS.map((l, i) => `<button class="lrow" data-a="quizSt" data-id="${l.id}"><span class="n">${i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">${byT(l.id).length} preguntas</span></span><span class="ic">›</span></button>`).join('')}</div></main>`;
+    }
+    if (G.g === 'quiz') {
+      if (G.i >= G.list.length) {
+        const n = G.list.length;
+        return `<main class="app">${back}<section class="card grade"><span class="eyebrow">${G.title}</span><b>${G.ok}/${n}</b><p>${G.ok === n ? `¡Perfecto, ${NAME}!` : G.ok >= n * 0.7 ? '¡Muy bien! Ya casi lo dominas.' : 'Vas aprendiendo. Las que fallaste quedan en «Mis errores».'}</p>
+          <div class="row"><button class="btn" data-a="game" data-g="${G.spaced ? 'quiz' : (G.errors ? 'errors' : 'quiz')}">Otra ronda</button><button class="btn line" data-a="go" data-v="${G.spaced ? 'home' : 'review'}">${G.spaced ? 'Volver al inicio' : 'Volver'}</button></div></section></main>`;
+      }
+      const q = QB[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><span class="eyebrow">${G.title}</span><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q">${sayBtn('gq-' + G.i, qScript(q), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, G.ch, 'gopt')}${G.ch != null ? vFb(q, G.ch, 'gf-' + G.i) : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="gnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'flash') {
+      const f = FLASH[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><h1>Tarjetas</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <button class="flip ${G.flip ? 'on' : ''}" data-a="flip" aria-label="Voltear tarjeta"><div class="flip-in"><div class="face front"><div><small>${L(f[0]).title}</small>${f[1]}<small class="hint-s">Toca para voltear</small></div></div><div class="face back"><div>${f[2]}</div></div></div></button>
+        ${sayBtn('fl-' + G.i, f[1] + '. ' + f[2], 'Escuchar', 'wide')}
+        <div class="nav-btns"><button class="btn line" data-a="fprev" ${G.i === 0 ? 'disabled' : ''}>← Anterior</button><button class="btn" data-a="fnext">${G.i === G.list.length - 1 ? 'Empezar de nuevo' : 'Siguiente →'}</button></div></main>`;
+    }
+    if (G.g === 'tf') {
+      if (G.i >= G.list.length) return `<main class="app">${back}<section class="card grade"><span class="eyebrow">Verdadero o falso</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="tf">Otra vez</button><button class="btn line" data-a="go" data-v="review">Volver</button></div></section></main>`;
+      const t = TF[G.list[G.i]]; const ok = G.pick != null && G.pick === t[1];
+      return `<main class="app">${back}<div class="spread"><h1>¿Verdadero o falso?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card tf-card">${t[0]}</section>${sayBtn('tf-' + G.i, t[0] + ' ¿Verdadero o falso?', 'Léemela', 'wide')}
+        ${G.pick == null ? `<div class="tf-btns"><button class="btn big-n" data-a="tf" data-v="1">Verdadero</button><button class="btn big-n ghost" data-a="tf" data-v="0">Falso</button></div>`
+        : `<div class="fb ${ok ? 'ok' : 'no'}"><b class="h">${ok ? '¡Correcto!' : 'Casi.'}</b><p>Es <b>${t[1] ? 'verdadero' : 'falso'}</b>. ${t[2]}</p>${sayBtn('tff-' + G.i, (ok ? '¡Correcto! ' : 'Casi. ') + 'Es ' + (t[1] ? 'verdadero. ' : 'falso. ') + t[2], 'Explícame')}</div><button class="btn big-n wide" data-a="tfnext">Siguiente →</button>`}</main>`;
+    }
+    if (G.g === 'order') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Ordenar</h1><div class="route">${ORDER_GAMES.map((o, i) => `<button class="lrow" data-a="ordPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const o = ORDER_GAMES[G.gi];
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Ordenar</h1><p class="q-text">${o.t}</p><p class="small muted">Usa las flechas ↑ ↓ para mover cada tarjeta.</p>
+        <div class="order-list">${G.arr.map((it, i) => { const cls = G.checked ? (it === i ? 'good' : 'badp') : '';
+          return `<div class="order-item ${cls}"><span class="on">${i + 1}</span><span>${o.items[it]}</span><span class="mv"><button data-a="ordUp" data-i="${i}" ${i === 0 ? 'disabled' : ''} aria-label="Subir">↑</button><button data-a="ordDn" data-i="${i}" ${i === G.arr.length - 1 ? 'disabled' : ''} aria-label="Bajar">↓</button></span></div>`; }).join('')}</div>
+        ${G.checked ? `<div class="fb ${G.arr.every((x, i) => x === i) ? 'ok' : 'no'}"><b class="h">${G.arr.every((x, i) => x === i) ? '¡Perfecto!' : 'Casi. Las verdes ya están bien.'}</b></div>` : ''}
+        <div class="nav-btns"><button class="btn" data-a="ordCheck">Revisar</button><button class="btn line" data-a="ordPick" data-i="${(G.gi + 1) % ORDER_GAMES.length}">Otro</button></div></main>`;
+    }
+    if (G.g === 'match') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Relacionar</h1><div class="route">${MATCH_GAMES.map((o, i) => `<button class="lrow" data-a="matPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const m = MATCH_GAMES[G.gi]; const all = G.done.length === m.pairs.length;
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Relacionar</h1><p class="q-text">${m.t}</p><p class="small muted">Toca una palabra de la izquierda y luego su pareja de la derecha.</p>
+        <div class="match-grid"><div class="stack">${m.pairs.map((p, i) => `<button class="${G.done.includes(i) ? 'done' : ''} ${G.sel === i ? 'sel' : ''}" data-a="matL" data-i="${i}" ${G.done.includes(i) ? 'disabled' : ''}>${p[0]}</button>`).join('')}</div>
+        <div class="stack">${G.right.map(j => `<button class="${G.done.includes(j) ? 'done' : ''} ${G.err === j ? 'err' : ''}" data-a="matR" data-i="${j}" ${G.done.includes(j) ? 'disabled' : ''}>${m.pairs[j][1]}</button>`).join('')}</div></div>
+        ${all ? `<div class="fb ok"><b class="h">¡Todas unidas!</b></div><button class="btn wide" data-a="matPick" data-i="${(G.gi + 1) % MATCH_GAMES.length}">Siguiente juego →</button>` : ''}</main>`;
+    }
+    if (G.g === 'riddle') {
+      const r = RIDDLES[G.i];
+      return `<main class="app">${back}<div class="spread"><h1>Adivina quién soy</h1><span class="small muted tnum">${G.i + 1} de ${RIDDLES.length}</span></div>
+        <section class="card">${r.c.slice(0, G.n).map((c, i) => `<p class="clue-r"><span class="chip">Pista ${i + 1}</span><span>${c}</span></p>`).join('')}
+        ${sayBtn('rd-' + G.i + '-' + G.n, 'Adivina quién soy. ' + r.c.slice(0, G.n).join(' '), 'Léeme las pistas')}
+        ${G.show ? `<div class="model"><b>Soy…</b><p class="vt">${r.a}</p></div>` : ''}</section>
+        <div class="nav-btns">${!G.show && G.n < r.c.length ? `<button class="btn line" data-a="rdMore">Otra pista</button>` : ''}${G.show ? `<button class="btn" data-a="rdNext">Siguiente →</button>` : `<button class="btn" data-a="rdShow">¿Quién soy?</button>`}</div></main>`;
+    }
+    if (G.g === 'vocab') {
+      if (G.i >= G.list.length) return `<main class="app">${backTo('words', 'Palabras')}<section class="card grade"><span class="eyebrow">Palabras</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="vocab">Otra vez</button><button class="btn line" data-a="go" data-v="words">Volver</button></div></section></main>`;
+      const g = GL[G.list[G.i]]; const opts = G.opts[G.i];
+      return `<main class="app">${backTo('words', 'Palabras')}<div class="spread"><h1>¿Qué palabra es?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q"><p class="q-text">${g.d}</p>${sayBtn('vq-' + G.i, '¿Qué palabra es? ' + g.d, 'Léemela', 'wide')}
+        <div class="opts">${opts.map((k, i) => { let c = ''; if (G.ch != null) { if (k === g.k) c = 'ok'; else if (i === G.ch) c = 'no'; } return `<button class="opt ${c}" data-a="vopt" data-i="${i}" ${G.ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${GL[k].t}</span></button>`; }).join('')}</div>
+        ${G.ch != null ? `<div class="fb ${opts[G.ch] === g.k ? 'ok' : 'no'}"><b class="h">${opts[G.ch] === g.k ? '¡Muy bien!' : 'Casi.'}</b><p>Es <b>${g.t}</b>. Ejemplo: ${g.ex}</p></div>` : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="vnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'cw') return vCW();
+    return `<main class="app">${back}</main>`;
+  }
+
+  /* Crucigrama */
+  const CWC = (() => {
+    const cells = {}; const nums = {};
+    const starts = CW.words.map((w, i) => ({ i, r: w.r, c: w.col })).sort((a, b) => a.r - b.r || a.c - b.c);
+    let n = 0; starts.forEach(s => { const k = s.r + '-' + s.c; if (!nums[k]) nums[k] = ++n; CW.words[s.i].n = nums[k]; });
+    CW.words.forEach((w, wi) => { for (let i = 0; i < w.w.length; i++) { const r = w.d === 'A' ? w.r : w.r + i, c = w.d === 'A' ? w.col + i : w.col; const k = r + '-' + c; (cells[k] = cells[k] || { ch: w.w[i], ws: [] }).ws.push(wi); } });
+    return { cells, nums };
+  })();
+  const cwKeys = wi => { const w = CW.words[wi]; const out = []; for (let i = 0; i < w.w.length; i++) out.push(w.d === 'A' ? w.r + '-' + (w.col + i) : (w.r + i) + '-' + w.col); return out; };
+  const cwSolved = wi => cwKeys(wi).every(k => (S.cw[k] || '') === CWC.cells[k].ch);
+  function vCW() {
+    const hl = UI.cwWord != null ? new Set(cwKeys(UI.cwWord)) : new Set();
+    let grid = '';
+    for (let r = 0; r < CW.H; r++) for (let c = 0; c < CW.W; c++) {
+      const k = r + '-' + c, cell = CWC.cells[k];
+      if (!cell) { grid += '<span class="cw-x"></span>'; continue; }
+      const v = S.cw[k] || ''; let cls = hl.has(k) ? 'hl' : '';
+      if (UI.cwCheck && v) cls += v === cell.ch ? ' good' : ' bad';
+      grid += `<label class="cw-c ${cls}">${CWC.nums[k] ? `<i>${CWC.nums[k]}</i>` : ''}<input data-cw="${k}" maxlength="2" value="${v}" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="characters" aria-label="Casilla"></label>`;
+    }
+    const solved = CW.words.filter((_, i) => cwSolved(i)).length;
+    const clue = (d, t) => `<h3>${t}</h3><div class="clues">${CW.words.map((w, i) => ({ w, i })).filter(x => x.w.d === d).sort((a, b) => a.w.n - b.w.n).map(x => `<button class="clue ${UI.cwWord === x.i ? 'on' : ''} ${cwSolved(x.i) ? 'solved' : ''}" data-a="cwClue" data-i="${x.i}"><b>${x.w.n}</b><span>${x.w.c} <small class="muted">(${x.w.w.length})</small></span></button>`).join('')}</div>`;
+    const cur = UI.cwWord != null ? CW.words[UI.cwWord] : null;
+    return `<main class="app">${backTo('review', 'Repasar')}<div class="spread"><h1>Crucigrama</h1><span class="chip">${solved} de ${CW.words.length}</span></div>
+      <p class="small muted">Toca una pista y escribe. Sin acentos.</p>
+      ${cur ? `<div class="card cw-now"><b>${cur.n} ${cur.d === 'A' ? '→' : '↓'}</b> ${cur.c}</div>` : ''}
+      <div class="cw-wrap"><div class="cw" style="--cw:min(var(--cwmax), calc((100vw - 36px - ${(CW.W - 1) * 2}px) / ${CW.W}));grid-template-columns:repeat(${CW.W}, var(--cw))">${grid}</div></div>
+      <div class="nav-btns"><button class="btn" data-a="cwCheck">Revisar</button><button class="btn line" data-a="cwClear">Borrar todo</button></div>
+      ${clue('A', 'Horizontales →')}${clue('D', 'Verticales ↓')}</main>`;
+  }
+
+  /* Palabras */
+  function vWords() {
+    return `<main class="app"><h1>Palabras</h1><p class="muted">Las palabras difíciles del capítulo, con ejemplo. También aparecen subrayadas con <span class="hw-demo">puntitos<span class="hw-q">?</span></span> dentro de las estaciones.</p>
+      <button class="btn ghost wide" data-a="game" data-g="vocab">🎯 Juego: ¿qué palabra es?</button>
+      <label class="sr" for="gq">Buscar palabra</label><input id="gq" class="search" data-in="gq" type="search" placeholder="Buscar palabra…" value="${UI.q.replace(/"/g, '&quot;')}">
+      <div class="gloss" id="glist">${glossList()}</div></main>`;
+  }
+  function glossList() {
+    const q = UI.q.trim().toLowerCase();
+    const list = GLOSSARY.filter(g => !q || (g.t + ' ' + g.d).toLowerCase().includes(q)).sort((a, b) => a.t.localeCompare(b.t, 'es'));
+    if (!list.length) return '<p class="muted">No encontré esa palabra.</p>';
+    return list.map(g => `<div class="gterm"><div class="spread"><b>${g.t}</b><span class="chip">pág. ${g.p}</span></div><p>${g.d}</p><p class="gex">Ejemplo: ${g.ex}</p>${sayBtn('w-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}</div>`).join('');
+  }
+
+  /* Exámenes */
+  function vExams() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Exámenes de práctica</h1><p class="muted">Una pregunta por pantalla. Al final ves tu calificación del 0 al 10 y la explicación de cada respuesta.</p>
+      ${EXAMS.map(e => `<section class="card exrow"><div><b class="exn">${e.t}</b><div class="small muted">${e.s}</div>${S.exams[e.id] != null ? `<div class="small ok-n">Tu mejor calificación: ${S.exams[e.id]}</div>` : ''}</div><button class="btn" data-a="exStart" data-id="${e.id}">Empezar</button></section>`).join('')}</main>`;
+  }
+  function vExam() {
+    const X = UI.ex; const e = EXAMS.find(x => x.id === X.id);
+    if (X.done) {
+      const ok = e.qs.filter(id => X.ans[id] === QB[id].a).length; const g = Math.round(ok / e.qs.length * 100) / 10;
+      return `<main class="app">${backTo('exams', 'Exámenes')}<section class="card grade"><span class="eyebrow">${e.t}</span><b>${g}</b><p>${ok} de ${e.qs.length} correctas</p>${sayBtn('exg', `Tu calificación es ${String(g).replace('.', ' punto ')}. Tuviste ${ok} de ${e.qs.length} correctas. ${g >= 8 ? '¡Excelente trabajo, ' + NAME + '!' : g >= 6 ? 'Vas bien. Repasa las que fallaste.' : 'No te preocupes: repasa las estaciones y vuelve a intentarlo.'}`, 'Escuchar')}</section>
+        <section class="card"><h2>Revisión</h2>${e.qs.map((id, i) => { const q = QB[id]; const y = X.ans[id]; const good = y === q.a;
+          return `<div class="review-item"><b>${i + 1}. ${q.q}</b>${good ? `<span class="ok">✓ ${q.o[q.a]}</span>` : `<span class="yo">✗ Tu respuesta: ${y == null ? '(sin responder)' : q.o[y]}</span><span class="ok">✓ Correcta: ${q.o[q.a]}</span>`}<span class="small muted">${q.e} · pág. ${q.p}</span></div>`; }).join('')}</section>
+        <button class="btn wide" data-a="exStart" data-id="${e.id}">Intentar de nuevo</button></main>`;
+    }
+    const q = QB[e.qs[X.i]]; const ch = X.ans[q.id];
+    return `<main class="app">${backTo('exams', 'Salir del examen')}<div class="spread"><span class="eyebrow">${e.t}</span><span class="small muted tnum">${X.i + 1} de ${e.qs.length}</span></div>
+      <section class="card q">${q.f ? `<span class="chip fmt">${q.f}</span>` : ''}${sayBtn('exq-' + X.i, qScript(q, X.i + 1), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>
+        <div class="opts">${q.o.map((o, i) => `<button class="opt ${ch === i ? 'picked' : ''}" data-a="exOpt" data-i="${i}"><span class="ov">${LET[i]}</span><span>${o}</span></button>`).join('')}</div></section>
+      <div class="nav-btns"><button class="btn line" data-a="exPrev" ${X.i === 0 ? 'disabled' : ''}>← Anterior</button>${X.i < e.qs.length - 1 ? `<button class="btn" data-a="exNext">Siguiente →</button>` : `<button class="btn" data-a="exEnd">Terminar y calificar</button>`}</div>
+      <div class="qnav" aria-label="Ir a pregunta">${e.qs.map((id, i) => `<button class="${X.ans[id] != null ? 'ans' : ''} ${i === X.i ? 'cur' : ''}" data-a="exGo" data-i="${i}">${i + 1}</button>`).join('')}</div></main>`;
+  }
+
+  /* Hoja de repaso */
+  function vHoja() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Hoja de repaso</h1><p class="muted">Primero mira el esquema. Luego, en los cuadros, intenta recordar y toca cada casilla para destapar la respuesta.</p>
+      <section class="card"><h2>Todo el capítulo en un cuadro sinóptico</h2>${sayBtn('hj', `Todo el capítulo ${CHAP.word} en un cuadro. ` + LESSONS.filter(l => !l.bridge).map(l => AUDIO[l.id]).join(' '), 'Explícame todo', 'wide')}${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+      ${COMPARE.map((t, ti) => `<section class="card"><div class="spread"><h2>${t.t}</h2><button class="btn small line" data-a="rvAll" data-i="${ti}">Destapar todo</button></div>
+        <div class="tbl-wrap"><table class="tbl rvt"><thead><tr>${t.head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${t.rows.map((r, ri) => `<tr><th scope="row">${r[0]}</th>${r.slice(1).map((c, ci) => { const k = ti + '-' + ri + '-' + ci; const o = UI.rv[k];
+          return `<td><button class="rv ${o ? 'open' : ''}" data-a="rv" data-k="${k}">${o ? c : '<span>Toca para ver</span>'}</button></td>`; }).join('')}</tr>`).join('')}</tbody></table></div></section>`).join('')}</main>`;
+  }
+
+  /* Videos */
+  function vVideos() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Videos y lecturas</h1><p class="muted">Son búsquedas en YouTube: elige un video corto de una universidad o de un profesor. Si un video contradice al libro, quédate con el libro.</p>
+      ${VIDEOS.map(v => `<section class="card vrow"><div><b>${v.t}</b><div class="small muted">${L(v.s).icon} ${L(v.s).title}</div></div><a class="btn small" href="https://www.youtube.com/results?search_query=${encodeURIComponent(v.q)}" target="_blank" rel="noopener">Buscar ▶</a></section>`).join('')}
+      <h2>Lecturas oficiales</h2>${READINGS.map(r => `<section class="card"><b>${r.t}</b><span class="small muted">${r.s}</span><a class="link" href="${r.url}" target="_blank" rel="noopener">Abrir ↗</a></section>`).join('')}</main>`;
+  }
+
+  /* Avance y voz */
+  function vAvance() {
+    const ans = Object.keys(S.ans); const ok = ans.filter(k => S.ans[k]).length;
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const rates = [[0.8, 'Lenta'], [0.95, 'Normal'], [1.15, 'Rápida']];
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Mi avance</h1>
+      <div class="stats"><div class="stat"><b>${nDone}/${LESSONS.length}</b><span>estaciones</span></div><div class="stat"><b>${ans.length ? Math.round(ok / ans.length * 100) : 0}%</b><span>aciertos (${ok} de ${ans.length})</span></div><div class="stat"><b>${streak()}</b><span>días seguidos</span></div></div>
+      <section class="card"><h2>Por estación</h2>${LESSONS.map(l => { const p = S.done[l.id] ? 100 : Math.round(screenIndex(l.id, pos(l.id).step, pos(l.id).sub) / totalScreens(l.id) * 100);
+        return `<div class="unitbar"><div class="spread small"><span>${l.icon} ${l.title}</span><span class="tnum">${p}%</span></div><div class="bar ${p === 100 ? 'ok' : ''}"><i style="width:${p}%"></i></div></div>`; }).join('')}</section>
+      <section class="card"><h2>La voz que explica</h2><p class="small muted">Velocidad:</p><div class="row">${rates.map(r => `<button class="icon-btn ${Math.abs(S.rate - r[0]) < 0.01 ? 'on' : ''}" data-a="rate" data-v="${r[0]}">${r[1]}</button>`).join('')}</div>
+        ${sayBtn('test', `Hola, ${NAME}. Así suena mi voz. Si quieres, la puedo hacer más lenta o más rápida.`, 'Probar la voz')}
+        <label class="check"><input type="checkbox" data-a="auto" ${S.auto ? 'checked' : ''}><span><b>Que la voz explique sola</b><br><small class="muted">Al abrir cada pantalla de estudio, la voz empieza a explicar sin que toques nada.</small></span></label>
+        ${synth ? '' : '<p class="ojo small">Este navegador no tiene voz. Abre la página en Chrome.</p>'}</section>
+      <section class="card"><h2>Otras opciones</h2><button class="btn line wide" data-a="tour">▶ Ver otra vez cómo se usa</button><button class="btn line wide danger" data-a="reset">Borrar mi avance</button></section></main>`;
+  }
+
+  /* Recorrido guiado */
+  function mock(k) {
+    if (k === 'hello') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn">Continuar →</div><div class="m-line">▶ Ver cómo se usa</div></div>`;
+    if (k === 'continue') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn pulse">Continuar →<small>Paso 2 de 5: Entender</small></div></div>`;
+    if (k === 'steps') return `<div class="phone"><div class="m-steps">${STEP_NAMES.map((s, i) => `<span class="${i < 2 ? 'on' : ''}">${STEP_IC[i]}<br>${s}</span>`).join('')}</div></div>`;
+    if (k === 'read') return `<div class="phone"><div class="fr-where small"><div><span class="lab">Empieza en</span>«${CHAP.tourRead[0]}…»</div><div><span class="lab">Termina en</span>«…${CHAP.tourRead[1]}»</div></div><div class="m-btn pulse">Ya lo leí ✓</div></div>`;
+    if (k === 'voice') return `<div class="phone"><div class="say wide on pulse"><span class="ic">🔊</span><span class="lbl">Explícame</span></div><div class="m-line">Lenta · Normal · Rápida</div></div>`;
+    if (k === 'word') return `<div class="phone"><p>${CHAP.tourWord[0]}<span class="hw-demo">${CHAP.tourWord[1]}<span class="hw-q">?</span></span>${CHAP.tourWord[2]}</p><div class="m-sheet"><b>${CHAP.tourWord[3]}</b><br><small>${CHAP.tourWord[4]}</small></div></div>`;
+    return `<div class="phone"><div class="m-sheet center">☕<br><b>Llevas 10 minutos</b><br><small>La página guarda dónde ibas</small></div></div>`;
+  }
+  function vTour() {
+    const T = UI.tour; const s = TOUR[T.i];
+    return `<div class="focus tour">
+      <header class="ftop"><button class="xbtn" data-a="tourX">✕ Salir</button><div class="fstep"><b>Cómo se usa la página</b><span>${T.i + 1} de ${TOUR.length}</span></div></header>
+      <div class="bar thin"><i style="width:${Math.round((T.i + 1) / TOUR.length * 100)}%"></i></div>
+      <main class="app focus-main"><section class="sheet center tour-s"><div class="big-emoji" aria-hidden="true">${s.ic}</div><h2>${s.t}</h2>${mock(s.mock)}<p class="body">${s.s}</p></section></main>
+      <footer class="fbot"><button class="back-l" data-a="tourPrev" ${T.i === 0 ? 'disabled' : ''}>← Atrás</button>
+        <button class="btn line" data-a="tourPlay">${T.play ? '⏸ Pausa' : '▶ Seguir'}</button>
+        ${T.i < TOUR.length - 1 ? `<button class="btn big-n" data-a="tourNext">Siguiente →</button>` : `<button class="btn big-n" data-a="tourEnd">¡Empezar!</button>`}</footer></div>`;
+  }
+
+  /* Hoja de palabra y avisos */
+  function vSheet() {
+    const g = GL[UI.sheet]; if (!g) return '';
+    return `<div class="scrim" data-a="sheetX"></div><div class="bsheet" role="dialog" aria-modal="true" aria-label="${g.t}"><div class="grab" aria-hidden="true"></div><div class="eyebrow">Palabra difícil · libro, pág. ${g.p}</div><h2>${g.t}</h2><p class="body">${g.d}</p><p class="gex"><b>Ejemplo:</b> ${g.ex}</p>
+      <div class="nav-btns">${sayBtn('gl-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}<button class="btn" data-a="sheetX">Entendido</button></div></div>`;
+  }
+  function vModal() {
+    if (UI.modal === 'pause') return `<div class="scrim"></div><div class="modal" role="dialog" aria-modal="true" aria-label="Descanso"><div class="big-emoji" aria-hidden="true">☕</div><h2>Llevas 10 minutos</h2><p>Lo estás haciendo muy bien, ${NAME}. Puedes descansar: la página guarda dónde ibas.</p>
+      <button class="btn wide" data-a="rest">Descansar ahora</button><button class="btn line wide" data-a="more5">Seguir 5 minutos más</button></div>`;
+    return '';
+  }
+
+  /* ═════════ RENDER ═════════ */
+  function render() {
+    SAY = {};
+    const v = UI.view; let html;
+    if (v === 'lesson') html = vLesson();
+    else if (v === 'tour') html = vTour();
+    else {
+      html = ({ home: vHome, study: vStudy, next: vNext, review: vReview, game: vGame, words: vWords, exams: vExams, exam: vExam, hoja: vHoja, videos: vVideos, avance: vAvance }[v] || vHome)();
+      html += vTabs();
+    }
+    if (UI.sheet) html += vSheet();
+    if (UI.modal) html += vModal();
+    app.innerHTML = html;
+    after();
+  }
+  function after() {
+    if (UI.view === 'lesson' && S.auto && !UI.modal && UI.autoKey !== UI.mainKey) { UI.autoKey = UI.mainKey; const id = UI.mainSay; setTimeout(() => { if (SAY[id] && UI.view === 'lesson') speak(SAY[id], id); }, 350); }
+    if (UI.view === 'tour' && UI.tour.play && UI.tour.spoken !== UI.tour.i) {
+      const i = UI.tour.i; UI.tour.spoken = i;
+      speak(TOUR[i].s, 'tour', () => { setTimeout(() => { if (UI.view === 'tour' && UI.tour.play && UI.tour.i === i && i < TOUR.length - 1) { UI.tour.i++; render(); } }, 700); });
+    }
+    if (UI.sheet) { const b = app.querySelector('.bsheet .btn'); if (b) b.focus({ preventScroll: true }); }
+  }
+  function go(v) { stop(); UI.view = v; UI.sheet = null; UI.modal = null; render(); top(); }
+  function openLesson(id) { stop(); S.at = id; save(); markDay(); UI.st = id; UI.view = 'lesson'; UI.t0 = Date.now(); UI.autoKey = ''; render(); top(); }
+  function move(d) {
+    const id = UI.st; let { step, sub } = pos(id);
+    if (d > 0) { if (sub + 1 < count(id, step)) sub++; else if (step < 4) { step++; sub = 0; toast(`Paso ${step + 1} de 5: ${STEP_NAMES[step]} ${STEP_IC[step]}`); } }
+    else { if (sub > 0) sub--; else if (step > 0) { step--; sub = count(id, step) - 1; } }
+    S.pos[id] = { step, sub }; save(); stop(); render(); top();
+  }
+
+  /* ═════════ EVENTOS ═════════ */
+  document.addEventListener('click', ev => {
+    const el = ev.target.closest('[data-a]'); if (!el || el.disabled) return;
+    const a = el.dataset.a; const G = UI.game;
+    switch (a) {
+      case 'go': go(el.dataset.v); break;
+      case 'cont': { const nx = nextStation(); if (nx) openLesson(nx); break; }
+      case 'open': openLesson(el.dataset.id); break;
+      case 'exit': stop(); UI.view = 'home'; render(); top(); toast('Guardado. Aquí te espera el botón Continuar.'); break;
+      case 'next': move(1); break;
+      case 'prev': move(-1); break;
+      case 'reveal': { const p = pos(UI.st); S.reveal[`${UI.st}:${p.step}:${p.sub}`] = true; save(); stop(); render();
+        if (S.auto) { const b = app.querySelector('[data-id^="a-"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); }
+        const m = app.querySelector('.model'); if (m) m.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'lopt': { const p = pos(UI.st); const k = UI.st + ':' + p.sub; if (S.lq[k] != null) break; const q = coreQs(UI.st)[p.sub]; const i = +el.dataset.i; S.lq[k] = i; rec(q, i === q.a); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (S.auto) { const b = app.querySelector('.fb [data-a="say"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); } break; }
+      case 'key': { const id = UI.st; const i = +el.dataset.i; const k = S.keys[id] || []; S.keys[id] = el.checked ? k.concat(i) : k.filter(x => x !== i); save(); break; }
+      case 'finish': { document.querySelectorAll('.toast').forEach(t => t.remove()); const id = UI.st; S.done[id] = S.done[id] || today(); S.sp[id] = S.sp[id] || []; S.pos[id] = { step: 0, sub: 0 };
+        Object.keys(S.reveal).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.reveal[k]; }); Object.keys(S.lq).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.lq[k]; });
+        const nx = LESSONS.find(l => !S.done[l.id]); S.at = nx ? nx.id : id; save(); stop(); UI.fin = id; UI.view = 'next'; render(); top(); break; }
+      case 'say': { const id = el.dataset.id; if (speakingId === id) stop(); else speak(SAY[id], id); break; }
+      case 'gl': ev.preventDefault(); UI.sheet = el.dataset.k; render(); break;
+      case 'sheetX': stop(); UI.sheet = null; render(); break;
+      case 'rest': UI.modal = null; stop(); UI.view = 'home'; render(); top(); toast('Guardado. ¡Buen descanso!'); break;
+      case 'more5': UI.modal = null; UI.t0 = Date.now() - PAUSE_MS + 5 * 60 * 1000; render(); break;
+      case 'tour': stop(); UI.tour = { i: 0, play: true, spoken: -1 }; UI.view = 'tour'; render(); top(); break;
+      case 'tourNext': if (UI.tour.i < TOUR.length - 1) { stop(); UI.tour.i++; UI.tour.spoken = -1; render(); } break;
+      case 'tourPrev': if (UI.tour.i > 0) { stop(); UI.tour.i--; UI.tour.spoken = -1; render(); } break;
+      case 'tourPlay': UI.tour.play = !UI.tour.play; if (!UI.tour.play) stop(); else UI.tour.spoken = -1; render(); break;
+      case 'tourX': case 'tourEnd': stop(); S.tour = true; save(); UI.view = 'home'; render(); top(); break;
+      case 'spaced': { const id = el.dataset.id; const list = shuffle(byT(id).map(q => q.id)).slice(0, 5); startQuiz(list, 'Repaso de hoy · ' + L(id).title, { spaced: id }); break; }
+      case 'game': startGame(el.dataset.g); break;
+      case 'quizAll': startQuiz(shuffle(BANK.map(q => q.id)).slice(0, 10), 'Mezcladas'); break;
+      case 'quizSt': startQuiz(shuffle(byT(el.dataset.id).map(q => q.id)), L(el.dataset.id).title); break;
+      case 'gopt': { if (G.ch != null) break; const q = QB[G.list[G.i]]; G.ch = +el.dataset.i; const ok = G.ch === q.a; if (ok) G.ok++; rec(q, ok, G.errors); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'gnext': G.i++; G.ch = null; stop();
+        if (G.i >= G.list.length && G.spaced) { S.sp[G.spaced] = (S.sp[G.spaced] || []).concat(today()); save(); }
+        render(); top(); break;
+      case 'flip': G.flip = !G.flip; render(); break;
+      case 'fnext': G.i = (G.i + 1) % G.list.length; G.flip = false; stop(); render(); break;
+      case 'fprev': G.i = Math.max(0, G.i - 1); G.flip = false; stop(); render(); break;
+      case 'tf': { const t = TF[G.list[G.i]]; G.pick = el.dataset.v === '1'; if (G.pick === t[1]) G.ok++; stop(); render(); break; }
+      case 'tfnext': G.i++; G.pick = null; stop(); render(); top(); break;
+      case 'ordPick': { const gi = +el.dataset.i; const n = ORDER_GAMES[gi].items.length; let arr; do { arr = shuffle([...Array(n).keys()]); } while (arr.every((x, i) => x === i)); Object.assign(G, { gi, arr, checked: false }); render(); top(); break; }
+      case 'ordUp': case 'ordDn': { const i = +el.dataset.i, j = a === 'ordUp' ? i - 1 : i + 1; [G.arr[i], G.arr[j]] = [G.arr[j], G.arr[i]]; G.checked = false; render(); break; }
+      case 'ordCheck': G.checked = true; render(); break;
+      case 'matPick': { const gi = +el.dataset.i; const n = MATCH_GAMES[gi].pairs.length; Object.assign(G, { gi, right: shuffle([...Array(n).keys()]), done: [], sel: null, err: null }); render(); top(); break; }
+      case 'matL': G.sel = +el.dataset.i; G.err = null; render(); break;
+      case 'matR': { const j = +el.dataset.i; if (G.sel == null) { toast('Primero toca una palabra de la izquierda'); break; } if (j === G.sel) { G.done.push(j); G.sel = null; G.err = null; } else { G.err = j; } render(); break; }
+      case 'rdMore': G.n++; stop(); render(); break;
+      case 'rdShow': G.show = true; stop(); render(); break;
+      case 'rdNext': G.i = (G.i + 1) % RIDDLES.length; G.n = 1; G.show = false; stop(); render(); break;
+      case 'vopt': { if (G.ch != null) break; G.ch = +el.dataset.i; if (G.opts[G.i][G.ch] === G.list[G.i]) G.ok++; render(); break; }
+      case 'vnext': G.i++; G.ch = null; stop(); render(); top(); break;
+      case 'cwClue': { UI.cwWord = +el.dataset.i; UI.cwCheck = false; render(); const k = cwKeys(UI.cwWord).find(x => (S.cw[x] || '') !== CWC.cells[x].ch) || cwKeys(UI.cwWord)[0]; const inp = app.querySelector(`[data-cw="${k}"]`); if (inp) inp.focus(); break; }
+      case 'cwCheck': UI.cwCheck = true; render(); { const s = CW.words.filter((_, i) => cwSolved(i)).length; toast(s === CW.words.length ? '¡Crucigrama completo! 🎉' : `Llevas ${s} de ${CW.words.length} palabras`); } break;
+      case 'cwClear': if (ask('cw', 'Toca otra vez «Borrar todo» para confirmar')) { S.cw = {}; save(); UI.cwCheck = false; render(); } break;
+      case 'exStart': UI.ex = { id: el.dataset.id, i: 0, ans: {}, done: false }; stop(); UI.view = 'exam'; render(); top(); break;
+      case 'exOpt': { const e = EXAMS.find(x => x.id === UI.ex.id); UI.ex.ans[e.qs[UI.ex.i]] = +el.dataset.i; render(); break; }
+      case 'exNext': UI.ex.i++; stop(); render(); top(); break;
+      case 'exPrev': UI.ex.i--; stop(); render(); top(); break;
+      case 'exGo': UI.ex.i = +el.dataset.i; stop(); render(); top(); break;
+      case 'exEnd': { const e = EXAMS.find(x => x.id === UI.ex.id); const miss = e.qs.filter(id => UI.ex.ans[id] == null).length;
+        if (miss && !ask('ex', `Te faltan ${miss} preguntas. Toca otra vez para calificar así`)) break;
+        UI.ex.done = true; e.qs.forEach(id => { if (UI.ex.ans[id] != null) rec(QB[id], UI.ex.ans[id] === QB[id].a); });
+        const g = Math.round(e.qs.filter(id => UI.ex.ans[id] === QB[id].a).length / e.qs.length * 100) / 10; S.exams[e.id] = Math.max(S.exams[e.id] || 0, g); save(); stop(); render(); top(); break; }
+      case 'rv': UI.rv[el.dataset.k] = !UI.rv[el.dataset.k]; render(); break;
+      case 'rvAll': { const ti = +el.dataset.i; const t = COMPARE[ti]; t.rows.forEach((r, ri) => r.slice(1).forEach((_, ci) => { UI.rv[ti + '-' + ri + '-' + ci] = true; })); render(); break; }
+      case 'rate': S.rate = +el.dataset.v; save(); render(); speak(`Así hablo a esta velocidad, ${NAME}.`, 'test'); break;
+      case 'auto': S.auto = el.checked; save(); toast(S.auto ? 'La voz explicará sola cada pantalla' : 'La voz solo habla cuando tocas Explícame'); break;
+      case 'reset': if (ask('reset', 'Toca otra vez para borrar todo tu avance (no se puede deshacer)')) { const keep = { rate: S.rate, auto: S.auto, tour: S.tour }; S = Object.assign(defaults(), keep); save(); go('home'); toast('Avance borrado'); } break;
+    }
+  });
+  document.addEventListener('input', ev => {
+    const el = ev.target;
+    if (el.dataset.in === 'note') { S.notes[UI.st] = el.value; save(); }
+    else if (el.dataset.in === 'gq') { UI.q = el.value; SAY = {}; const box = document.getElementById('glist'); if (box) box.innerHTML = glossList(); }
+    else if (el.dataset.cw) {
+      const k = el.dataset.cw; const v = (el.value || '').toUpperCase().normalize('NFD').replace(/[^A-ZÑ]/g, '').slice(-1);
+      el.value = v; if (v) S.cw[k] = v; else delete S.cw[k]; save();
+      if (v) { const ws = UI.cwWord != null && CWC.cells[k].ws.includes(UI.cwWord) ? UI.cwWord : CWC.cells[k].ws[0]; const keys = cwKeys(ws); const nk = keys[keys.indexOf(k) + 1]; if (nk) { const n = app.querySelector(`[data-cw="${nk}"]`); if (n) { n.focus(); n.select(); } } }
+    }
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && UI.sheet) { UI.sheet = null; stop(); render(); } });
+  document.addEventListener('focusin', ev => { const k = ev.target.dataset && ev.target.dataset.cw; if (k && (UI.cwWord == null || !CWC.cells[k].ws.includes(UI.cwWord))) { UI.cwWord = CWC.cells[k].ws[0]; const box = app.querySelector('.cw-now'); const w = CW.words[UI.cwWord]; if (box) box.innerHTML = `<b>${w.n} ${w.d === 'A' ? '→' : '↓'}</b> ${w.c}`; } });
+
+  /* Pausa amable a los 10 minutos */
+  setInterval(() => { if (UI.view === 'lesson' && !UI.modal && Date.now() - UI.t0 >= PAUSE_MS) { stop(); UI.modal = 'pause'; render(); } }, 15000);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+
+  render();
+})();
+
+</script>
+</body>
+</html>
